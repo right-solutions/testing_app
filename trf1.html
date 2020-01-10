@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+    <title>Test Monitoring App</title>
+    
+    <link href="dist/css/style.css" rel="stylesheet">
+    <link href="assets/node_modules/wizard/steps.css" rel="stylesheet">
+    <link href="assets/node_modules/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+     
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body class="skin-default-dark fixed-layout">
+
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">Elite admin</p>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <!-- ============================================================== -->
+                <!-- Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                        <!-- Logo icon --><b>
+                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                            <!-- Dark Logo icon -->
+                            <!--<img src="assets/images/logo-icon.png" alt="homepage" class="dark-logo" />-->
+                            <!-- Light Logo icon -->
+                            <!--<img src="assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />-->
+                        </b>
+                        <!--End Logo icon -->
+                        <!-- Logo text --><span>
+                         <!-- dark Logo text -->
+                         <!--<img src="assets/images/logo-text.png" alt="homepage" class="dark-logo" />-->
+                         <!-- Light Logo text -->    
+                         <img src="assets/images/logo-light-text.png" class="light-logo" alt="homepage" /></span> </a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav mr-auto">
+                        <!-- This is  -->
+                        <li class="nav-item"> <a class="nav-link nav-toggler d-block d-md-none waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                        <li class="nav-item"> <a class="nav-link sidebartoggler d-none d-lg-block d-md-block waves-effect waves-dark" href="javascript:void(0)"><i class="icon-menu"></i></a> </li>
+                        <!-- ============================================================== -->
+                        <!-- Search -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item">
+                            <form class="app-search d-none d-md-block d-lg-block">
+                                <input type="text" class="form-control" placeholder="Search & enter">
+                            </form>
+                        </li>
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- User profile and search -->
+                    <!-- ============================================================== -->
+                    
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- User Profile-->
+                <div class="user-profile">
+                    <div class="user-pro-body">
+                        <div><img src="assets/images/users/2.jpg" alt="user-img" class="img-circle"></div>
+                        <div class="dropdown">
+                            <a href="javascript:void(0)" class="dropdown-toggle u-dropdown link hide-menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Steave Gection <span class="caret"></span></a>
+                            <div class="dropdown-menu animated flipInY">
+                                <a href="javascript:void(0)" class="dropdown-item"><i class="ti-user"></i> My Profile</a>
+                                <a href="javascript:void(0)" class="dropdown-item"><i class="ti-settings"></i> Account Setting</a>
+                                <a href="javascript:void(0)" class="dropdown-item"><i class="fa fa-power-off"></i> Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li class="nav-small-cap"></li>
+                        	<li> <a class="waves-effect waves-dark" href="javascript:void(0)"><i class="icon-speedometer"></i><span class="hide-menu">Dashboard</span></a>
+                            <li> <a class="waves-effect waves-dark" href="javascript:void(0)"><i class="icon-speedometer"></i><span class="hide-menu">Menu One</span></a>
+                            <li> <a class="waves-effect waves-dark" href="javascript:void(0)"><i class="icon-speedometer"></i><span class="hide-menu">Menu Two</span></a>
+                            <li> <a class="waves-effect waves-dark" href="javascript:void(0)"><i class="icon-speedometer"></i><span class="hide-menu">Menu Three</span></a>
+                            <li> <a class="waves-effect waves-dark" href="javascript:void(0)"><i class="icon-speedometer"></i><span class="hide-menu">Menu Four</span></a>
+                            <li> <a class="waves-effect waves-dark" href="javascript:void(0)"><i class="icon-speedometer"></i><span class="hide-menu">Menu Five</span></a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <div class="row page-titles">
+                    <div class="col-md-5 align-self-center">
+                        <h4 class="text-themecolor">Test Monitoring App</h4>
+                    </div>
+                    <div class="col-md-7 align-self-center text-right">
+                        <div class="d-flex justify-content-end align-items-center">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                                <li class="breadcrumb-item active">Test Monitoring App</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                <!-- row -->
+                
+                
+                <!-- Validation wizard -->
+                <div class="row" id="validation">
+                    <div class="col-12">
+                        <div class="card wizard-content">
+                            <div class="card-body">
+                                <form action="#" class="validation-wizard vertical wizard-circle">
+                                    <!-- Step 1 -->
+                                    
+                                    
+                                    <h6>Step 1</h6>
+                                    <section>
+                                    	<div class="card-header bg-dark"><h4 class="mb-0 text-white">Applicant Details</h4></div>
+                                        <br>
+                                        <div class="row">
+                                        	<div class="col-md-4">
+                                            	<div class="custom-control custom-radio">
+                                                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                                    <label class="custom-control-label" for="customRadio1">Official</label>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-4">
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                                    <label class="custom-control-label" for="customRadio2">Self Referrence</label>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-lg-4">
+                                                    <div class="controls">
+                                                    <select name="" class="form-control">
+                                                    <option selected disabled>Select Service Type</option>
+                                                    <option>Regular</option>
+                                                    <option>Option 2</option>
+                                                    </select> 
+                                             	</div>
+                                             </div>
+                                        </div>
+                                        
+                                        <hr>
+                                        
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="wApplicant"> Applicant : <span class="danger">*</span> </label>
+                                                    <input type="text" class="form-control " id="wApplicant" name="applicant"> </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="wAddress"> Address : <span class="danger">*</span> </label>
+                                                    <input type="text" class="form-control " id="wAddress" name="address"> </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="wATTIN"> ATTIN : <span class="danger">*</span> </label>
+                                                    <input type="text" class="form-control " id="wATTIN" name="attin"> </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="wemailAddress"> Email : <span class="danger">*</span> </label>
+                                                    <input type="email" class="form-control " id="wemailAddress" name="emailAddress"> </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="wtelephone">Telephone : <span class="danger">*</span> </label>
+                                                    <input type="tel" class="form-control " id="wphoneNumber"> </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="wtelephone">Mobile : <span class="danger">*</span> </label>
+                                                    <input type="tel" class="form-control " id="wmobile" name="mobile"> </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="wemailAddress"> Fax : <span class="danger">*</span> </label>
+                                                    <input type="text" class="form-control " id="wfaxno" name="faxno"> </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="wtelephone">TRF Send to : <span class="danger">*</span> </label>
+                                                    <input type="text" class="form-control " id="wtfrsentto" name="tfrsentto"> </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                    </section>
+                                    <!-- Step 2 -->
+                                    
+                                     <h6>Step 2</h6>
+                                     <section>
+                                     <div class="card-header bg-dark"><h4 class="mb-0 text-white">Buyer Details</h4></div>
+                                        <br>
+                                        <div class="row">
+                                            		<div class="col-lg-4">
+                                                    <div class="form-group">
+                                                    <label for="wbuyerbrand">Buyer/Brand <span class="text-danger">*</span></label>
+                                                        <div class="controls">
+                                                        <select name="" class="form-control">
+                                                        	<option></option>
+                                                        </select> 
+                                                        </div>
+                                                	</div>
+                                                    </div>
+                                                    
+                                                    <div class="col-lg-4">
+                                                    <div class="form-group">
+                                                    <label for="wsales">Sales country <span class="text-danger">*</span></label>
+                                                        <div class="controls">
+                                                        <select name="" class="form-control">
+                                                        	<option></option>
+                                                        </select> 
+                                                        </div>
+                                                	</div>
+                                                    </div>
+                                                    
+                                                    <div class="col-lg-4">
+                                                    <div class="form-group">
+                                                    <label for="wgis">Gis office <span class="text-danger">*</span></label>
+                                                        <div class="controls">
+                                                        <select name="" class="form-control">
+                                                        	<option></option>
+                                                        </select> 
+                                                        </div>
+                                                	</div>
+                                        </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                        			<div class="col-md-4">
+                                                    <div class="form-group">
+                                                    <label for="wdep">Department <span class="text-danger">*</span></label>
+                                                        <div class="controls">
+                                                        <select name="" class="form-control">
+                                                        	<option></option>
+                                                        </select> 
+                                                        </div>
+                                                	</div>
+                                                    </div>
+                                                    
+                                                    <div class="col-md-4">
+                                                    <div class="form-group">
+                                                    <label for="wvendor">Vendor <span class="text-danger">*</span></label>
+                                                        <div class="controls">
+                                                        <input type="text" name="email" class="form-control"> 
+                                                        </div>
+                                                	</div>
+                                                    </div>
+                                                    
+                                                    <div class="col-md-4">
+                                                    <div class="form-group">
+                                                    <label for="wvendorid">Vendor Id	 <span class="text-danger">*</span></label>
+                                                        <div class="controls">
+                                                        <input type="text" name="email" class="form-control"> 
+                                                        </div>
+                                                	</div>
+                                                    </div>
+                                        </div>
+                                        
+                                        
+                                        
+                                        <hr>
+                                        
+                                        
+                                        <br>
+                                    	<div class="row">
+                                        	<div class="col-md-4">
+                                            <div class="form-group">
+                                            	<label for="wvendorid">External TRF No:	 <span class="text-danger">*</span></label>
+                                            	<div class="controls"><input type="text" name="email" class="form-control"> </div>
+                                            </div>
+                                            </div>
+                                            
+                                            <div class="col-md-4">
+                                            <div class="form-group">
+                                            	<label for="wvendorid">RD No:	 <span class="text-danger">*</span></label>
+                                            	<div class="controls"><input type="text" name="email" class="form-control"> </div>
+                                            </div>
+                                            </div>
+                                            
+                                            <div class="col-md-4">
+                                            	<label for="wvendorid">Retest:	 <span class="text-danger">*</span></label>
+                                                <div class="row">
+                                                <div class="col-md-6">
+                                            	<div class="custom-control custom-radio">
+                                                    <input type="radio" id="customRadioS1" name="customRadioS" class="custom-control-input">
+                                                    <label class="custom-control-label" for="customRadioS1">Yes</label>
+                                                </div>
+                                                </div>
+                                                
+                                                <div class="col-md-6">
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" id="customRadioS2" name="customRadioS" class="custom-control-input">
+                                                    <label class="custom-control-label" for="customRadioS2">No</label>
+                                                </div>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <div class="row">
+                                        	<div class="col-md-4">
+                                            <div class="form-group">
+                                            	<label for="wvendorid">Previous Test Report No:	 <span class="text-danger">*</span></label>
+                                            	<div class="controls"><input type="text" name="email" class="form-control"> </div>
+                                            </div>
+                                            </div>
+                                            
+                                            <div class="col-md-8">
+                                            <div class="form-group">
+                                            	<label for="wvendorid">Description:	 <span class="text-danger">*</span></label>
+                                            	<div class="controls"><textarea name="" cols="" rows="" class="form-control"></textarea> </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                     </section>
+                                     
+                                     
+                                     
+                                    <h6>Step 3</h6>
+                                    <section>
+                                    	
+                                        
+                                        
+                                        
+                                        
+                                        <div class="card-header bg-dark"><h4 class="mb-0 text-white">Fabric Details</h4></div>
+                                        <br>
+                                        <div class="row">
+                                        <div class="col-md-4">
+                                        	<div class="form-group">
+                                            	<label for="wvendorid">Article No:	 <span class="text-danger">*</span></label>
+                                            	<div class="controls"><input type="text" name="article" class="form-control"> </div>
+                                        	</div>
+                                        </div>
+                                        
+                                        <div class="col-md-4">
+                                        	<div class="form-group">
+                                            	<label for="wvendorid">Country Of Orgin:	 <span class="text-danger">*</span></label>
+                                            	<div class="controls"><input type="text" name="orgin" class="form-control"> </div>
+                                        	</div>
+                                        </div>
+                                        
+                                        <div class="col-md-4">
+                                        	<div class="form-group">
+                                            	<label for="wvendorid">Fabric Mill:	 <span class="text-danger">*</span></label>
+                                            	<div class="controls"><input type="text" name="mill" class="form-control"> </div>
+                                        	</div>
+                                        </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                        <div class="col-md-4">
+                                        	<div class="form-group">
+                                            	<label for="wvendorid">Fabric Weight:	 <span class="text-danger">*</span></label>
+                                            	<div class="controls"><input type="text" name="weight" class="form-control"> </div>
+                                        	</div>
+                                        </div>
+                                        
+                                        <div class="col-md-4">
+                                        	<div class="form-group">
+                                            	<label for="wvendorid">Yarn Count:	 <span class="text-danger">*</span></label>
+                                                <div class="row">
+                                                <div class="col-md-6">
+                                                	<input type="text" name="warnwrap" class="form-control" placeholder="Wrap">
+                                                </div>
+                                                
+                                                <div class="col-md-6">
+                                                	<input type="text" name="yarnweft" class="form-control" placeholder="Weft">
+                                                </div>
+                                                </div>
+                                        	</div>
+                                        </div>
+                                        
+                                        <div class="col-md-4">
+                                        	<div class="form-group">
+                                            	<label for="wvendorid">Thread Count:	 <span class="text-danger">*</span></label>
+                                            	<div class="row">
+                                                <div class="col-md-6">
+                                                	<input type="text" name="wrap" class="form-control" placeholder="Wrap">
+                                                </div>
+                                                
+                                                <div class="col-md-6">
+                                                	<input type="text" name="weft" class="form-control" placeholder="Weft">
+                                                </div>
+                                                </div>
+                                        	</div>
+                                        </div>
+                                        </div>
+                                        
+                                        
+                                        <div class="row">
+                                        <div class="col-md-4">
+                                        	<div class="form-group">
+                                            	<label for="wvendorid">Claim Construction:	 <span class="text-danger">*</span></label>
+                                            	<div class="controls"><input type="text" name="article" class="form-control"> </div>
+                                        	</div>
+                                        </div>
+                                        
+                                        <div class="col-md-4">
+                                        	<div class="form-group">
+                                            	<label for="wvendorid">Season:	 <span class="text-danger">*</span></label>
+                                            	<div class="controls">
+                                                	<select class="form-control">
+                                                    	<option></option>
+                                                    </select>
+                                                </div>
+                                        	</div>
+                                        </div>
+                                        
+                                        <div class="col-md-4">
+                                        	<div class="form-group">
+                                            	<label for="wvendorid">Content:	 <span class="text-danger">*</span></label>
+                                            	<div class="controls"><button type="button" class="btn waves-effect waves-light btn-block btn-info">Add Content</button></div>
+                                        	</div>
+                                        </div>
+                                        </div>
+                                        
+                                        
+                                        <div class="row">
+                                        <div class="col-md-4">
+                                        	<div class="form-group">
+                                            	<label for="wvendorid">Finish:	 <span class="text-danger">*</span></label>
+                                            	<div class="controls">
+                                                	<select class="form-control">
+                                                    	<option></option>
+                                                    </select>
+                                                </div>
+                                        	</div>
+                                        </div>
+                                        
+                                        <div class="col-md-4">
+                                        	<div class="form-group">
+                                            	<label for="wvendorid">End Use:	 <span class="text-danger">*</span></label>
+                                            	<div class="controls">
+                                                	<select class="form-control">
+                                                    	<option></option>
+                                                    </select>
+                                                </div>
+                                        	</div>
+                                        </div>
+                                        
+                                        <div class="col-md-4">
+                                        	<div class="form-group">
+                                            	<label for="wvendorid">Color:	 <span class="text-danger">*</span></label>
+                                            	<div class="controls"><button  type="button" class="btn waves-effect waves-light btn-block btn-info">Add Colors</button></div>
+                                        	</div>
+                                        </div>
+                                        </div>
+                                        
+                                        
+                                        
+                                        <div class="row">
+                                        <div class="col-md-4">
+                                        	<div class="form-group">
+                                            	<label for="wvendorid">End use description:	 <span class="text-danger">*</span></label>
+                                            	<div class="controls"><input type="text" name="weight" class="form-control"> </div>
+                                        	</div>
+                                        </div>
+                                        
+                                        <div class="col-md-4">
+                                        	<div class="form-group">
+                                            	<label for="wvendorid">Special Claim:	 <span class="text-danger">*</span></label>
+                                            	<div class="controls"><input type="text" name="weight" class="form-control"> </div>
+                                        	</div>
+                                        </div>
+                                        
+                                        <div class="col-md-4">
+                                        	<div class="form-group">
+                                            	<label for="wvendorid">Test Stage:	 <span class="text-danger">*</span></label>
+                                            	<div class="row">
+                                                <div class="col-md-6">
+                                            	<div class="custom-control custom-radio">
+                                                    <input type="radio" id="customRadioS1" name="customRadioS" class="custom-control-input">
+                                                    <label class="custom-control-label" for="customRadioS1">Development</label>
+                                                </div>
+                                                </div>
+                                                
+                                                <div class="col-md-6">
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" id="customRadioS2" name="customRadioS" class="custom-control-input">
+                                                    <label class="custom-control-label" for="customRadioS2">Production</label>
+                                                </div>
+                                                </div>
+                                                </div>
+                                        	</div>
+                                        </div>
+                                        </div>
+                                        
+                                        
+                                        
+                                        <div class="row">
+                                        <div class="col-md-4">
+                                        	<div class="form-group">
+                                            	<label for="wvendorid">Style No:	 <span class="text-danger">*</span></label>
+                                            	<div class="controls"><input type="text" name="weight" class="form-control"> </div>
+                                        	</div>
+                                        </div>
+                                        
+                                        <div class="col-md-4">
+                                        	<div class="form-group">
+                                            	<label for="wvendorid">Test Type:	 <span class="text-danger">*</span></label>
+                                            	<div class="controls"><input type="text" name="weight" class="form-control"> </div>
+                                        	</div>
+                                        </div>
+                                        
+                                        <div class="col-md-4">
+                                        	<div class="form-group">
+                                            	<label for="wvendorid">Dye Type:	 <span class="text-danger">*</span></label>
+                                            	<div class="controls"><input type="text" name="weight" class="form-control"> </div>
+                                        	</div>
+                                        </div>
+                                        </div>
+                                        
+                                        
+                                        <div class="row">
+                                        <div class="col-md-4">
+                                        	<div class="form-group">
+                                            	<label for="wvendorid">PI:	 <span class="text-danger">*</span></label>
+                                            	<div class="controls"><input type="text" name="weight" class="form-control"> </div>
+                                        	</div>
+                                        </div>
+                                        
+                                        <div class="col-md-4">
+                                        	<div class="form-group">
+                                            	<label for="wvendorid">Submitted Sample:	 <span class="text-danger">*</span></label>
+                                            	<div class="row">
+                                                <div class="col-md-6">
+                                            	<div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                                    <label class="custom-control-label" for="customCheck1">Washed</label>
+                                                </div>
+                                                </div>
+                                                
+                                                <div class="col-md-6">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                    <label class="custom-control-label" for="customCheck2">Unwashed</label>
+                                                </div>
+                                                </div>
+                                                </div>
+                                        	</div>
+                                        </div>
+                                        </div>
+                                        
+                                        
+                                        
+                                        <div class="row">
+                                        <div class="col-md-6">
+                                        	<div class="form-group">
+                                            	<label for="wvendorid">Care Instructions:	 <span class="text-danger">*</span></label>
+                                            	<div class="controls"><textarea name="" cols="" rows="" class="form-control"></textarea></div>
+                                        	</div>
+                                        </div>
+                                        
+                                        <div class="col-md-6">
+                                        	<div class="form-group">
+                                            	<label for="wvendorid">Remarks:	 <span class="text-danger">*</span></label>
+                                            	<div class="controls"><textarea name="" cols="" rows="" class="form-control"></textarea></div>
+                                        	</div>
+                                        </div>
+                                        </div>
+                                        
+                                    </section>
+                                    
+                                    
+                                    <!-- Step 3 -->
+                                    <h6>Step 4</h6>
+                                    <section class="testselection">
+                                    	<div class="card-header bg-dark"><h4 class="mb-0 text-white">Test Selection</h4></div>
+                                        <br>
+                                    	
+                                        <div class="row">
+                                        	<div class="col-md-4">
+                                            	<div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                                    <label class="custom-control-label" for="customCheck3">FPT</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                            	<div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                                    <label class="custom-control-label" for="customCheck4">Additional Colorway</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                            	<label for="wvendorid">Previous Report No:	 <span class="text-danger">*</span></label>
+                                            	<div class="controls"><input type="text" name="weight" class="form-control"> </div>
+                                            </div>
+                                        </div>
+                                    	
+                                        <hr>
+                                        
+                                        <div class="row">
+                                        	<div class="col-md-4">
+                                                <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                <label class="custom-control-label" for="customCheck2">Count</label>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-4">
+                                                <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                <label class="custom-control-label" for="customCheck2">Abrasion</label>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-4">
+                                                <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                <label class="custom-control-label" for="customCheck2">Construction</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                <label class="custom-control-label" for="customCheck2">Pilling</label>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-4">
+                                                <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                <label class="custom-control-label" for="customCheck2">GSM</label>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-4">
+                                                <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                <label class="custom-control-label" for="customCheck2">Rubbing</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                <label class="custom-control-label" for="customCheck2">Tear</label>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-4">
+                                                <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                <label class="custom-control-label" for="customCheck2">Spray Test</label>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-4">
+                                                <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                <label class="custom-control-label" for="customCheck2">Stretch & Recovery</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                <label class="custom-control-label" for="customCheck2">Seam slippage & seam strength</label>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-4">
+                                                <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                <label class="custom-control-label" for="customCheck2">Tensile</label>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-4">
+                                                <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                <label class="custom-control-label" for="customCheck2">Torque</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                <label class="custom-control-label" for="customCheck2">Dimesional stability to washing</label>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-4">
+                                                <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                <label class="custom-control-label" for="customCheck2">Appearance after wash</label>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-4">
+                                                <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                <label class="custom-control-label" for="customCheck2">Color fastness to washing</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                <label class="custom-control-label" for="customCheck2">Color fastness to water</label>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-4">
+                                                <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                <label class="custom-control-label" for="customCheck2">Color fastness to perspiration</label>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-4">
+                                                <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                <label class="custom-control-label" for="customCheck2">Color fastness to non chlorine bleach</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                <label class="custom-control-label" for="customCheck2">Color fastness to chlorine cleach</label>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-4">
+                                                <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                <label class="custom-control-label" for="customCheck2">Color fastness to sea water</label>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-4">
+                                                <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                <label class="custom-control-label" for="customCheck2">Color fastness to chlorinated pool water</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                <label class="custom-control-label" for="customCheck2">Color fastness to phenolic yellowing</label>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-4">
+                                                <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                <label class="custom-control-label" for="customCheck2">Vertical wicking</label>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-4">
+                                                <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                <label class="custom-control-label" for="customCheck2">Absorbancy</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                <label class="custom-control-label" for="customCheck2">PH</label>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-4">
+                                                <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                <label class="custom-control-label" for="customCheck2">Any spl test mention here</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </section>
+                                    
+                                    
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- End Page wrapper  -->
+
+        <footer class="footer">
+            &copy; 2020 Right Solutions
+        </footer>
+       
+       
+    </div>
+    <!-- End Wrapper -->
+    
+    <script src="assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
+    <script src="assets/node_modules/popper/popper.min.js"></script>
+    <script src="assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="dist/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="dist/js/waves.js"></script>
+    <script src="dist/js/sidebarmenu.js"></script>
+    <script src="assets/node_modules/sticky-kit-master/dist/sticky-kit.min.js"></script>
+    <script src="assets/node_modules/sparkline/jquery.sparkline.min.js"></script>
+    <script src="dist/js/custom.min.js"></script>
+    
+    <script src="dist/js/pages/validation.min.js"></script>
+    <script>
+    ! function(window, document, $) {
+        "use strict";
+        $("input,select,textarea").not("[type=submit]").jqBootstrapValidation();
+    }(window, document, jQuery);
+    </script>
+    
+    <script src="dist/js/pages/jasny-bootstrap.js"></script>
+    
+    <script src="assets/node_modules/wizard/jquery.steps.min.js"></script>
+    <script src="assets/node_modules/wizard/jquery.validate.min.js"></script>
+    <script>
+        $(".tab-wizard").steps({
+            headerTag: "h6",
+            bodyTag: "section",
+            transitionEffect: "fade",
+            titleTemplate: '<span class="step">#index#</span> #title#',
+            labels: {
+                finish: "Submit"
+            },
+            onFinished: function (event, currentIndex) {
+                swal("Form Submitted!", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem erat eleifend ex semper, lobortis purus sed.");
+
+            }
+        });
+
+
+        var form = $(".validation-wizard").show();
+
+        $(".validation-wizard").steps({
+            headerTag: "h6",
+            bodyTag: "section",
+            transitionEffect: "fade",
+            titleTemplate: '<span class="step">#index#</span> #title#',
+            labels: {
+                finish: "Submit"
+            },
+            onStepChanging: function (event, currentIndex, newIndex) {
+                return currentIndex > newIndex || !(3 === newIndex && Number($("#age-2").val()) < 18) && (currentIndex < newIndex && (form.find(".body:eq(" + newIndex + ") label.error").remove(), form.find(".body:eq(" + newIndex + ") .error").removeClass("error")), form.validate().settings.ignore = ":disabled,:hidden", form.valid())
+            },
+            onFinishing: function (event, currentIndex) {
+                return form.validate().settings.ignore = ":disabled", form.valid()
+            },
+            onFinished: function (event, currentIndex) {
+                swal("Form Submitted!", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem erat eleifend ex semper, lobortis purus sed.");
+            }
+        }), $(".validation-wizard").validate({
+            ignore: "input[type=hidden]",
+            errorClass: "text-danger",
+            successClass: "text-success",
+            highlight: function (element, errorClass) {
+                $(element).removeClass(errorClass)
+            },
+            unhighlight: function (element, errorClass) {
+                $(element).removeClass(errorClass)
+            },
+            errorPlacement: function (error, element) {
+                error.insertAfter(element)
+            },
+            rules: {
+                email: {
+                    email: !0
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
