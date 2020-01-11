@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
-    <title>Test Request Forms</title>
+    <title>Test Requests</title>
     <link href="dist/css/style.css" rel="stylesheet">
     <link href="assets/node_modules/wizard/steps.css" rel="stylesheet">
     <link href="assets/node_modules/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
@@ -33,7 +33,7 @@
       <!-- Topbar header - style you can find in pages.scss -->
       <!-- ============================================================== -->
       <header class="topbar">
-        <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+        <nav class="navbar top-navbar navbar-expand-md navbar-dark" style="height: 5vh;">
           <!-- ============================================================== -->
           <!-- Logo -->
           <!-- ============================================================== -->
@@ -43,15 +43,15 @@
               <b>
                 <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                 <!-- Dark Logo icon -->
-                <!--<img src="assets/images/logo-icon.png" alt="homepage" class="dark-logo" />-->
+                <!-- <img src="assets/images/logo-icon.png" alt="homepage" class="dark-logo" /> -->
                 <!-- Light Logo icon -->
-                <!--<img src="assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />-->
+                <!-- <img src="assets/images/logo-light-icon.png" alt="homepage" class="light-logo" /> -->
               </b>
               <!--End Logo icon -->
               <!-- Logo text -->
               <span>
                 <!-- dark Logo text -->
-                <!--<img src="assets/images/logo-text.png" alt="homepage" class="dark-logo" />-->
+                <!-- <img src="assets/images/logo-text.png" alt="homepage" class="dark-logo" /> -->
                 <!-- Light Logo text -->
                 <img src="assets/images/logo-light-text.png" class="light-logo" alt="homepage" />
               </span>
@@ -71,11 +71,30 @@
               <!-- ============================================================== -->
               <!-- Search -->
               <!-- ============================================================== -->
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <form class="app-search d-none d-md-block d-lg-block">
                   <input type="text" class="form-control" placeholder="Search & enter">
                 </form>
+              </li> -->
+            </ul>
+
+            <ul class="navbar-nav my-lg-0">
+              <!-- ============================================================== -->
+              <!-- Comment -->
+              <!-- ============================================================== -->
+              <li class="nav-item">
+                <a class="nav-link" href="" > 
+                John Dalton
+                <img src="assets/images/users/2.jpg" alt="user-img" class="img-circle" style="height:34px;">
+                </a>
               </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href=""> 
+                <i class="fas fa-sign-out-alt"></i>
+                </a>
+              </li>
+              
             </ul>
             <!-- ============================================================== -->
             <!-- User profile and search -->
@@ -92,30 +111,30 @@
       <aside class="left-sidebar">
         <!-- Sidebar scroll-->
         <div class="scroll-sidebar">
-          <!-- User Profile-->
-          <div class="user-profile">
-            <div class="user-pro-body">
-              <div><img src="assets/images/users/2.jpg" alt="user-img" class="img-circle"></div>
-              <div class="dropdown">
-                <a href="javascript:void(0)" class="dropdown-toggle u-dropdown link hide-menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Steave Gection <span class="caret"></span></a>
-                <div class="dropdown-menu animated flipInY">
-                  <a href="javascript:void(0)" class="dropdown-item"><i class="ti-user"></i> My Profile</a>
-                  <a href="javascript:void(0)" class="dropdown-item"><i class="ti-settings"></i> Account Setting</a>
-                  <a href="javascript:void(0)" class="dropdown-item"><i class="fa fa-power-off"></i> Logout</a>
-                </div>
-              </div>
-            </div>
-          </div>
           <!-- Sidebar navigation-->
           <nav class="sidebar-nav">
             <ul id="sidebarnav">
               <li class="nav-small-cap"></li>
-              <li> <a class="waves-effect waves-dark" href="javascript:void(0)"><i class="icon-speedometer"></i><span class="hide-menu">Dashboard</span></a></li>
-              <li> <a class="waves-effect waves-dark" href="javascript:void(0)"><i class="icon-speedometer"></i><span class="hide-menu">Menu One</span></a></li>
-              <li> <a class="waves-effect waves-dark" href="javascript:void(0)"><i class="icon-speedometer"></i><span class="hide-menu">Menu Two</span></a></li>
-              <li> <a class="waves-effect waves-dark" href="javascript:void(0)"><i class="icon-speedometer"></i><span class="hide-menu">Menu Three</span></a></li>
-              <li> <a class="waves-effect waves-dark" href="javascript:void(0)"><i class="icon-speedometer"></i><span class="hide-menu">Menu Four</span></a></li>
-              <li> <a class="waves-effect waves-dark" href="javascript:void(0)"><i class="icon-speedometer"></i><span class="hide-menu">Menu Five</span></a></li>
+              <li> <a class="waves-effect waves-dark" href="dashboard.html"><i class="icon-speedometer"></i><span class="hide-menu">Dashboard</span></a></li>
+              <li class="active"> <a class="waves-effect waves-dark" href="test_requests.html"><i class="icon-layers"></i><span class="hide-menu">Test Requests</span></a></li>
+              <li> <a class="waves-effect waves-dark" href="worksheets.html"><i class="ti-files"></i><span class="hide-menu">Worksheets</span></a></li>
+              
+              <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icon-docs"></i><span class="hide-menu">Reports</span></a>
+                <ul aria-expanded="false" class="collapse">
+                  <li><a href="reports.html"><i class="icon-docs mr-2"></i>Report 1</a></li>
+                  <li><a href="reports.html"><i class="icon-docs mr-2"></i>Report 2</a></li>
+                  <li><a href="reports.html"><i class="icon-docs mr-2"></i>Report 3</a></li>
+                </ul>
+              </li>
+
+              <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="ti-settings"></i><span class="hide-menu">Admin</span></a>
+                <ul aria-expanded="false" class="collapse">
+                  <li><a href="manage_users.html"><i class="icon-people mr-2"></i>Manage Users</a></li>
+                  <li><a href="look_ups.html"><i class="fa fa-th-list mr-2"></i>Look Ups</a></li>
+                  <li><a href="settings.html"><i class="ti-settings mr-2"></i>Settings</a></li>
+                </ul>
+              </li>
+
             </ul>
           </nav>
           <!-- End Sidebar navigation -->
@@ -128,7 +147,7 @@
       <!-- ============================================================== -->
       <!-- Page wrapper  -->
       <!-- ============================================================== -->
-      <div class="page-wrapper">
+      <div class="page-wrapper" style="padding-top: 7vh;">
         <!-- ============================================================== -->
         <!-- Container fluid  -->
         <!-- ============================================================== -->
@@ -138,13 +157,13 @@
           <!-- ============================================================== -->
           <div class="row page-titles">
             <div class="col-md-5 align-self-center">
-              <h4 class="text-themecolor">Test Request Forms</h4>
+              <h4 class="text-themecolor">Test Requests</h4>
             </div>
             <div class="col-md-7 align-self-center text-right">
               <div class="d-flex justify-content-end align-items-center">
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                  <li class="breadcrumb-item active">Test Request Forms</li>
+                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                  <li class="breadcrumb-item active">Test Requests</li>
                 </ol>
               </div>
             </div>
@@ -167,8 +186,43 @@
                       <h6 class="card-subtitle">Data table example</h6> -->
                     <br>
                     <div class="container-fluid">
+                      <div class="row mb-2">
+                        <div class="col-md-8">
+
+                          <!-- Add Button -->
+                          <a class="btn btn-primary mr-2" data-remote="true" href="new_test_reqeust.html">
+                            <span class="fa fa-plus"></span> New Test Request
+                          </a>
+
+                          <!-- Refresh & Filter Button Group -->
+                          <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary">
+                              <a href="#"><i class="fa fa-sync-alt"></i> Refresh</a>
+                            </button>
+                            <button type="button" class="btn btn-secondary">
+                              <a href="#"><i class="fa fa-filter"></i> Filter</a>
+                            </button>
+                          </div>
+
+                          <!-- Columns & Export Button Group -->
+                          <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary">
+                              <a href="#"><i class="fa fa-file-excel"></i> Excel</a>
+                            </button>
+                            <button type="button" class="btn btn-secondary">
+                              <a href="#"><i class="fa fa-file-csv"></i> CSV</a>
+                            </button>
+                          </div>
+                          
+                        </div>
+
+                        <div class="col-md-4 col-xs-12 mt-2 mt-sm-0">
+                          <form class="pull-right" id="new_leave_request" style="margin-bottom:0px;width:100%;" action="http://localhost:9001/7/leave_requests?called_from=index&amp;locale=en" accept-charset="UTF-8" data-remote="true" method="get"><input name="utf8" type="hidden" value="✓"><div class="input-group"><input type="hidden" name="site_id" id="site_id" value="7"><input type="text" name="q" id="q" value="" class="form-control" placeholder="Search ..."><span class="input-group-append"><button name="button" type="submit" class="btn btn-primary"><i class="fa fa-search"></i><span class="btn-text hidden-sm hidden-xs"> Search!</span></button></span></div></form>
+                        </div>
+                        
+                      </div>
                       <div class="row" style="border: 1px solid #c1c1c1;padding: 25px; ">
-    <!--                     <div class="col-md-12">
+                        <!-- <div class="col-md-12">
                           <h3>Filter: </h3>
                         </div> -->
                         <div class="col-md-2">
@@ -235,214 +289,209 @@
                       <table id="myTable" class="table table-bordered table-striped color-table muted-table">
                         <thead>
                           <tr>
-                            <th>Si No</th>
+                            <th>Sl. No.</th>
+                            <th>Test Request ID</th>
                             <th>Test Status</th>
-                            <th>Test Request Id</th>
-                            <th>Submited Date</th>
+                            <th>Date Started</th>
+                            <th>PI No</th>
+                            <th>Color No</th>
+                            <th>Test Report ID</th>
+                            <th>Submitted Date</th>
+                            <th>Last Modified Date</th>
                             <th>Buyer</th>
-                            <th>Service Type</th>
+                            <th>Applicant</th>
+                            <th>Report Generated Date</th>
+                            <th>Revision</th>
+                            <th>Previous Report ID</th>
                           </tr>
                         </thead>
                         <tbody>
+                          
                           <tr>
                             <td>1</td>
-                            <td><span class="label label-danger">Pending</span></td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011/04/25</td>
-                            <td>$320,800</td>
-                          </tr>
-                          <tr>
-                            <td>2</td>
-                            <td><span class="label label-success">Report Issued</span></td>
-                            <td>Tokyo</td>
-                            <td>63</td>
-                            <td>2011/07/25</td>
-                            <td>$170,750</td>
-                          </tr>
-                          <tr>
-                            <td>3</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
                             <td><span class="label label-info">On Process</span></td>
-                            <td>San Francisco</td>
-                            <td>66</td>
-                            <td>2009/01/12</td>
-                            <td>$86,000</td>
+                            <td>2019-10-14</td>
+                            <td>PI1234</td>
+                            <td>CLR1234</td>
+                            <td><a href='test_requests.html'> TRP-1234-XA1 </a></td>
+                            <td>2019-10-14</td>
+                            <td>2019-10-14</td>
+                            <td>Gap</td>
+                            <td>Fiona</td>
+                            <td>2019-10-14</td>
+                            <td>No</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
                           </tr>
+
                           <tr>
-                            <td>4</td>
-                            <td>Senior Javascript Developer</td>
-                            <td>Edinburgh</td>
-                            <td>22</td>
-                            <td>2012/03/29</td>
-                            <td>$433,060</td>
-                          </tr>
-                          <tr>
-                            <td>5</td>
-                            <td>Accountant</td>
-                            <td>Tokyo</td>
-                            <td>33</td>
-                            <td>2008/11/28</td>
-                            <td>$162,700</td>
-                          </tr>
-                          <tr>
-                            <td>6</td>
-                            <td>Integration Specialist</td>
-                            <td>New York</td>
-                            <td>61</td>
-                            <td>2012/12/02</td>
-                            <td>$372,000</td>
-                          </tr>
-                          <tr>
-                            <td>7</td>
-                            <td>Sales Assistant</td>
-                            <td>San Francisco</td>
-                            <td>59</td>
-                            <td>2012/08/06</td>
-                            <td>$137,500</td>
-                          </tr>
-                          <tr>
-                            <td>8</td>
-                            <td>Integration Specialist</td>
-                            <td>Tokyo</td>
-                            <td>55</td>
-                            <td>2010/10/14</td>
-                            <td>$327,900</td>
-                          </tr>
-                          <tr>
-                            <td>9</td>
+                            <td>1</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
                             <td><span class="label label-success">Report Issued</span></td>
-                            <td>San Francisco</td>
-                            <td>39</td>
-                            <td>2009/09/15</td>
-                            <td>$205,500</td>
+                            <td>2019-10-14</td>
+                            <td>PI1234</td>
+                            <td>CLR1234</td>
+                            <td><a href='test_requests.html'> TRP-1234-XA1 </a></td>
+                            <td>2019-10-14</td>
+                            <td>2019-10-14</td>
+                            <td>Gap</td>
+                            <td>Fiona</td>
+                            <td>2019-10-14</td>
+                            <td>No</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
                           </tr>
+
                           <tr>
-                            <td>10</td>
+                            <td>1</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
+                            <td><span class="label label-danger">Pending</span></td>
+                            <td>2019-10-14</td>
+                            <td>PI1234</td>
+                            <td>CLR1234</td>
+                            <td><a href='test_requests.html'> TRP-1234-XA1 </a></td>
+                            <td>2019-10-14</td>
+                            <td>2019-10-14</td>
+                            <td>Gap</td>
+                            <td>Fiona</td>
+                            <td>2019-10-14</td>
+                            <td>No</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
+                          </tr>
+
+                          <tr>
+                            <td>1</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
+                            <td><span class="label label-info">On Process</span></td>
+                            <td>2019-10-14</td>
+                            <td>PI1234</td>
+                            <td>CLR1234</td>
+                            <td><a href='test_requests.html'> TRP-1234-XA1 </a></td>
+                            <td>2019-10-14</td>
+                            <td>2019-10-14</td>
+                            <td>Gap</td>
+                            <td>Fiona</td>
+                            <td>2019-10-14</td>
+                            <td>No</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
+                          </tr>
+
+                          <tr>
+                            <td>1</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
+                            <td><span class="label label-info">On Process</span></td>
+                            <td>2019-10-14</td>
+                            <td>PI1234</td>
+                            <td>CLR1234</td>
+                            <td><a href='test_requests.html'> TRP-1234-XA1 </a></td>
+                            <td>2019-10-14</td>
+                            <td>2019-10-14</td>
+                            <td>Gap</td>
+                            <td>Fiona</td>
+                            <td>2019-10-14</td>
+                            <td>No</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
+                          </tr>
+
+                          <tr>
+                            <td>1</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
                             <td><span class="label label-success">Report Issued</span></td>
-                            <td>Edinburgh</td>
-                            <td>23</td>
-                            <td>2008/12/13</td>
-                            <td>$103,600</td>
+                            <td>2019-10-14</td>
+                            <td>PI1234</td>
+                            <td>CLR1234</td>
+                            <td><a href='test_requests.html'> TRP-1234-XA1 </a></td>
+                            <td>2019-10-14</td>
+                            <td>2019-10-14</td>
+                            <td>Gap</td>
+                            <td>Fiona</td>
+                            <td>2019-10-14</td>
+                            <td>No</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
                           </tr>
+
                           <tr>
-                            <td>11</td>
+                            <td>1</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
                             <td><span class="label label-success">Report Issued</span></td>
-                            <td>London</td>
-                            <td>30</td>
-                            <td>2008/12/19</td>
-                            <td>$90,560</td>
+                            <td>2019-10-14</td>
+                            <td>PI1234</td>
+                            <td>CLR1234</td>
+                            <td><a href='test_requests.html'> TRP-1234-XA1 </a></td>
+                            <td>2019-10-14</td>
+                            <td>2019-10-14</td>
+                            <td>Gap</td>
+                            <td>Fiona</td>
+                            <td>2019-10-14</td>
+                            <td>No</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
                           </tr>
+
                           <tr>
-                            <td>12</td>
-                            <td>Support Lead</td>
-                            <td>Edinburgh</td>
-                            <td>22</td>
-                            <td>2013/03/03</td>
-                            <td>$342,000</td>
+                            <td>1</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
+                            <td><span class="label label-danger">Pending</span></td>
+                            <td>2019-10-14</td>
+                            <td>PI1234</td>
+                            <td>CLR1234</td>
+                            <td><a href='test_requests.html'> TRP-1234-XA1 </a></td>
+                            <td>2019-10-14</td>
+                            <td>2019-10-14</td>
+                            <td>Gap</td>
+                            <td>Fiona</td>
+                            <td>2019-10-14</td>
+                            <td>No</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
                           </tr>
+
                           <tr>
-                            <td>13</td>
-                            <td>Regional Director</td>
-                            <td>San Francisco</td>
-                            <td>36</td>
-                            <td>2008/10/16</td>
-                            <td>$470,600</td>
+                            <td>1</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
+                            <td><span class="label label-danger">Pending</span></td>
+                            <td>2019-10-14</td>
+                            <td>PI1234</td>
+                            <td>CLR1234</td>
+                            <td><a href='test_requests.html'> TRP-1234-XA1 </a></td>
+                            <td>2019-10-14</td>
+                            <td>2019-10-14</td>
+                            <td>Gap</td>
+                            <td>Fiona</td>
+                            <td>2019-10-14</td>
+                            <td>No</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
                           </tr>
+
                           <tr>
-                            <td>14</td>
-                            <td>Senior Marketing Designer</td>
-                            <td>London</td>
-                            <td>43</td>
-                            <td>2012/12/18</td>
-                            <td>$313,500</td>
+                            <td>1</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
+                            <td><span class="label label-danger">Pending</span></td>
+                            <td>2019-10-14</td>
+                            <td>PI1234</td>
+                            <td>CLR1234</td>
+                            <td><a href='test_requests.html'> TRP-1234-XA1 </a></td>
+                            <td>2019-10-14</td>
+                            <td>2019-10-14</td>
+                            <td>Gap</td>
+                            <td>Fiona</td>
+                            <td>2019-10-14</td>
+                            <td>No</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
                           </tr>
+
                           <tr>
-                            <td>15</td>
-                            <td>Regional Director</td>
-                            <td>London</td>
-                            <td>19</td>
-                            <td>2010/03/17</td>
-                            <td>$385,750</td>
-                          </tr>
-                          <tr>
-                            <td>16</td>
-                            <td>Marketing Designer</td>
-                            <td>London</td>
-                            <td>66</td>
-                            <td>2012/11/27</td>
-                            <td>$198,500</td>
-                          </tr>
-                          <tr>
-                            <td>17</td>
-                            <td>Chief Financial Officer (CFO)</td>
-                            <td>New York</td>
-                            <td>64</td>
-                            <td>2010/06/09</td>
-                            <td>$725,000</td>
-                          </tr>
-                          <tr>
-                            <td>18</td>
-                            <td>Systems Administrator</td>
-                            <td>New York</td>
-                            <td>59</td>
-                            <td>2009/04/10</td>
-                            <td>$237,500</td>
-                          </tr>
-                          <tr>
-                            <td>19</td>
-                            <td>Software Engineer</td>
-                            <td>London</td>
-                            <td>41</td>
-                            <td>2012/10/13</td>
-                            <td>$132,000</td>
-                          </tr>
-                          <tr>
-                            <td>20</td>
-                            <td>Personnel Lead</td>
-                            <td>Edinburgh</td>
-                            <td>35</td>
-                            <td>2012/09/26</td>
-                            <td>$217,500</td>
-                          </tr>
-                          <tr>
-                            <td>21</td>
-                            <td>Development Lead</td>
-                            <td>New York</td>
-                            <td>30</td>
-                            <td>2011/09/03</td>
-                            <td>$345,000</td>
-                          </tr>
-                          <tr>
-                            <td>22</td>
-                            <td>Chief Marketing Officer (CMO)</td>
-                            <td>New York</td>
-                            <td>40</td>
-                            <td>2009/06/25</td>
-                            <td>$675,000</td>
-                          </tr>
-                          <tr>
-                            <td>23</td>
-                            <td>Pre-Sales Support</td>
-                            <td>New York</td>
-                            <td>21</td>
-                            <td>2011/12/12</td>
-                            <td>$106,450</td>
-                          </tr>
-                          <tr>
-                            <td>24</td>
-                            <td>Sales Assistant</td>
-                            <td>Sidney</td>
-                            <td>23</td>
-                            <td>2010/09/20</td>
-                            <td>$85,600</td>
-                          </tr>
-                          <tr>
-                            <td>25</td>
-                            <td>Chief Executive Officer (CEO)</td>
-                            <td>London</td>
-                            <td>47</td>
-                            <td>2009/10/09</td>
-                            <td>$1,200,000</td>
+                            <td>1</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
+                            <td><span class="label label-info">On Process</span></td>
+                            <td>2019-10-14</td>
+                            <td>PI1234</td>
+                            <td>CLR1234</td>
+                            <td><a href='test_requests.html'> TRP-1234-XA1 </a></td>
+                            <td>2019-10-14</td>
+                            <td>2019-10-14</td>
+                            <td>Gap</td>
+                            <td>Fiona</td>
+                            <td>2019-10-14</td>
+                            <td>No</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
                           </tr>
                          
                         </tbody>
@@ -503,32 +552,19 @@
     <script src="dist/js/pages/jasny-bootstrap.js"></script>
     <script>
       $(function () {
-        $('#myTable').DataTable();
-        var table = $('#example').DataTable({
-          "columnDefs": [{
-            "visible": false,
-            "targets": 2
-          }],
+        $(function () {
+        var table = $('#myTable').DataTable({
+          "bInfo": false,
+          "lengthChange": false,
+          "responsive": true,
+          "searching": false,
+          "paging": true,
+          "ordering": true,
           "order": [
-          [2, 'asc']
-          ],
-          "displayLength": 25,
-          "drawCallback": function (settings) {
-            var api = this.api();
-            var rows = api.rows({
-              page: 'current'
-            }).nodes();
-            var last = null;
-            api.column(2, {
-              page: 'current'
-            }).data().each(function (group, i) {
-              if (last !== group) {
-                $(rows).eq(i).before('<tr class="group"><td colspan="5">' + group + '</td></tr>');
-                last = group;
-              }
-            });
-          }
+            [1, 'asc']
+          ]
         });
+      });
       });
     </script>
   </body>

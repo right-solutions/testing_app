@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+    <title>Test Monitoring App</title>
+    
+    <link href="dist/css/style.css" rel="stylesheet">
+    <link href="assets/node_modules/wizard/steps.css" rel="stylesheet">
+    <link href="assets/node_modules/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+    
+    <link href="dist/css/pages/tab-page.css" rel="stylesheet">
+     
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body class="skin-green-dark fixed-layout">
+
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">Elite admin</p>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <!-- ============================================================== -->
+                <!-- Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="">
+                        <!-- Logo icon --><b>
+                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                            <!-- Dark Logo icon -->
+                            <!--<img src="assets/images/logo-icon.png" alt="homepage" class="dark-logo" />-->
+                            <!-- Light Logo icon -->
+                            <img src="assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                        </b>
+                        <!--End Logo icon -->
+                        <!-- Logo text --><span>
+                         <!-- dark Logo text -->
+                         <!--<img src="assets/images/logo-text.png" alt="homepage" class="dark-logo" />-->
+                         <!-- Light Logo text -->    
+                         <!--<img src="assets/images/logo-light-text.png" class="light-logo" alt="homepage" /></span>--> </a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav mr-auto">
+                        <!-- This is  -->
+                        <li class="nav-item"> <a class="nav-link nav-toggler d-block d-md-none waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                        <li class="nav-item"> <a class="nav-link sidebartoggler d-none d-lg-block d-md-block waves-effect waves-dark" href="javascript:void(0)"><i class="icon-menu"></i></a> </li>
+                        <!-- ============================================================== -->
+                        <!-- Search -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item">
+                            <form class="app-search d-none d-md-block d-lg-block">
+                                <input type="text" class="form-control" placeholder="Search & enter">
+                            </form>
+                        </li>
+                    </ul>
+                    
+                    
+                    <ul class="navbar-nav my-lg-0">
+                        <!-- ============================================================== -->
+                        <!-- Comment -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="" > 
+                            John Deo
+                            <img src="assets/images/users/2.jpg" alt="user-img" class="img-circle" style="height:34px;">
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href=""> 
+                            <i class="fas fa-sign-out-alt"></i>
+                            </a>
+                        </li>
+                        
+                        
+                        
+                        </ul>
+                    <!-- ============================================================== -->
+                    <!-- User profile and search -->
+                    <!-- ============================================================== -->
+                    
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li class="nav-small-cap"></li>
+                        	<li> <a class="waves-effect waves-dark" href="javascript:void(0)"><i class="icon-speedometer"></i><span class="hide-menu">Dashboard</span></a>
+                            <li> <a class="waves-effect waves-dark" href="javascript:void(0)"><i class="icon-speedometer"></i><span class="hide-menu">Menu One</span></a>
+                            <li> <a class="waves-effect waves-dark" href="javascript:void(0)"><i class="icon-speedometer"></i><span class="hide-menu">Menu Two</span></a>
+                            <li> <a class="waves-effect waves-dark" href="javascript:void(0)"><i class="icon-speedometer"></i><span class="hide-menu">Menu Three</span></a>
+                            <li> <a class="waves-effect waves-dark" href="javascript:void(0)"><i class="icon-speedometer"></i><span class="hide-menu">Menu Four</span></a>
+                            <li> <a class="waves-effect waves-dark" href="javascript:void(0)"><i class="icon-speedometer"></i><span class="hide-menu">Menu Five</span></a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <div class="row page-titles">
+                    <div class="col-md-5 align-self-center">
+                        <h4 class="text-themecolor">Test Monitoring App</h4>
+                    </div>
+                    <div class="col-md-7 align-self-center text-right">
+                        <div class="d-flex justify-content-end align-items-center">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                                <li class="breadcrumb-item active">Test Monitoring App</li>
+                            </ol>
+                            <button type="button" class="btn btn-success d-none d-lg-block m-l-15"><i class="fa fa-plus-circle"></i> EXPORT</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Bread crumb and right sidebar toggle -->
+                
+                
+                
+                <div class="row">
+                	<div class="col-md-12 worksheet-page-top">
+                    <div class="card">
+                    <div class="card-body">
+                    	
+                        <div class="row">
+                        	<div class="col-md-4"><label>Buyer: </label> Sample Name</div>
+                            <div class="col-md-4"><label>PI Number: </label> Sample Name</div>
+                            <div class="col-md-4"><label>Type: </label> Sample Name</div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                        	<div class="col-md-4"><label>Avt No: </label> Sample Name</div>
+                            <div class="col-md-4"><label>GSM: </label> Sample Name</div>
+                            <div class="col-md-4"><label>End use: </label> Sample Name</div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                        	<div class="col-md-4"><label>Finish: </label> Sample Name</div>
+                            <div class="col-md-4"><label>Content: </label> Sample Name</div>
+                        </div>
+                        
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                
+                
+                
+               <!-- row -->
+               
+                <div class="row">
+                    <div class="col-md-12 worksheet-page">
+                        <div class="card">
+                            <div class="card-body">
+                                <!-- Nav tabs -->
+                                <div class="vtabs">
+                                    <ul class="nav nav-tabs tabs-vertical" role="tablist">
+                                        <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="tab" href="#home4" role="tab">
+                                        	<span class="hidden-sm-up"></span> <span class="hidden-xs-down">RED</span> 
+                                        </a></li>
+                                        <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#profile4" role="tab">
+                                        	<span class="hidden-sm-up"></span> <span class="hidden-xs-down">BLUE</span>
+                                        </a></li>
+                                        <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#messages4" role="tab">
+                                        	<span class="hidden-sm-up"></span> <span class="hidden-xs-down">GREEN</span>
+                                        </a></li>
+                                    </ul>
+                                    <!-- Tab panes -->
+                                    
+                                    
+                                    <div class="tab-content" style="width:100%;">
+                                    	
+                                        <div class="tab-pane active" id="home4" role="tabpanel">
+                                        	
+                                            <blockquote>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <b>Colours:</b> Green
+                                                </div>
+                                                
+                                                <div class="col-md-6">
+                                                    <b>SFPT:</b> Yes
+                                                </div>
+                                            </div>
+                                            </blockquote>
+                                        
+                                        	<div id="accordian-3">
+                                            <div class="card">
+                                                <a class="card-header bg-dark" id="heading11" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                                    <button class="btn btn-link collapsed">
+                                                        <h5 class="mb-0">Test 1</h5>
+                                                    </button>
+                                                </a>
+                                                <div id="collapse1" class="collapse show" aria-labelledby="heading11" data-parent="#accordian-3" style="">
+                                                    <div class="card-body">
+                                                    	<div class="row">
+                                                        	<div class="col-md-6">
+                                                            	<label for="wdep">Test Name</label>
+                                                            	<input name="" type="text" class="form-control" disabled value="sample value">
+                                                            </div>
+                                                            
+                                                            <div class="col-md-6">
+                                                            	<label for="wdep">Test Method</label>
+                                                            	<input name="" type="text" class="form-control" disabled value="sample value">
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        
+                                                        <div class="alert alert-success">
+                                                        <p class="p-10 m-0"><b>Sub Tittle: </b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a augue orci. Sed et elit ex. Fusce quis justo et ex condimentum posuere et vel erat. Sed rutrum ac ligula quis malesuada. Nam pretium dolor quis lectus condimentum, nec lacinia dolor suscipit. Quisque sollicitudin finibus.</p>
+                                                        </div>
+                                                        
+                                                        <div class="table-responsive">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Parameter</th>
+                                                                    <th>Requirements</th>
+                                                                    <th>Test 1</th>
+                                                                    <th>Test 2</th>
+                                                                    <th>Test 3</th>
+                                                                    <th>Avg</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Wrap</td>
+                                                                    <td>2.016F </td>
+                                                                    <td><input name="" type="text" class="form-control"></td>
+                                                                    <td><input name="" type="text" class="form-control"></td>
+                                                                    <td><input name="" type="text" class="form-control"></td>
+                                                                    <td>Avg text</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Wrap</td>
+                                                                    <td>2.016F </td>
+                                                                    <td><input name="" type="text" class="form-control"></td>
+                                                                    <td><input name="" type="text" class="form-control"></td>
+                                                                    <td><input name="" type="text" class="form-control"></td>
+                                                                    <td>Avg text</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Wrap</td>
+                                                                    <td>2.016F </td>
+                                                                    <td><input name="" type="text" class="form-control"></td>
+                                                                    <td><input name="" type="text" class="form-control"></td>
+                                                                    <td><input name="" type="text" class="form-control"></td>
+                                                                    <td>Avg text</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    
+                                                    <h4 class="card-title">TEST RESULT STATUS</h4>
+                                                    <div class="row">
+                                                    	<div class="col-md-6">
+                                                        <label>Remarks</label>
+                                                        <textarea name="" cols="" rows="" class="form-control"></textarea>
+                                                        </div>
+                                                        
+                                                        <div class="col-md-6">
+                                                        <label>Remarks</label>
+                                                        <textarea name="" cols="" rows="" class="form-control"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="card"><!--accoridian2-->
+                                                <a class="card-header bg-dark" id="heading22" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                                    <button class="btn btn-link collapsed">
+                                                        <h5 class="mb-0">Test 2</h5>
+                                                    </button>
+                                                </a>
+                                                <div id="collapse2" class="collapse" aria-labelledby="heading22" data-parent="#accordian-3">
+                                                    <div class="card-body">
+                                                       <div class="row">
+                                                        	<div class="col-md-6">
+                                                            	<label for="wdep">Test Name</label>
+                                                            	<input name="" type="text" class="form-control" disabled value="sample value">
+                                                            </div>
+                                                            
+                                                            <div class="col-md-6">
+                                                            	<label for="wdep">Test Method</label>
+                                                            	<input name="" type="text" class="form-control" disabled value="sample value">
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        
+                                                        <div class="alert alert-success">
+                                                        <p class="p-10 m-0"><b>Sub Tittle: </b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a augue orci. Sed et elit ex. Fusce quis justo et ex condimentum posuere et vel erat. Sed rutrum ac ligula quis malesuada. Nam pretium dolor quis lectus condimentum, nec lacinia dolor suscipit. Quisque sollicitudin finibus.</p>
+                                                        </div>
+                                                        
+                                                        <div class="table-responsive">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Parameter</th>
+                                                                    <th>Requirements</th>
+                                                                    <th>Test 1</th>
+                                                                    <th>Test 2</th>
+                                                                    <th>Test 3</th>
+                                                                    <th>Avg</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Wrap</td>
+                                                                    <td>2.016F </td>
+                                                                    <td><input name="" type="text" class="form-control"></td>
+                                                                    <td><input name="" type="text" class="form-control"></td>
+                                                                    <td><input name="" type="text" class="form-control"></td>
+                                                                    <td>Avg text</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Wrap</td>
+                                                                    <td>2.016F </td>
+                                                                    <td><input name="" type="text" class="form-control"></td>
+                                                                    <td><input name="" type="text" class="form-control"></td>
+                                                                    <td><input name="" type="text" class="form-control"></td>
+                                                                    <td>Avg text</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Wrap</td>
+                                                                    <td>2.016F </td>
+                                                                    <td><input name="" type="text" class="form-control"></td>
+                                                                    <td><input name="" type="text" class="form-control"></td>
+                                                                    <td><input name="" type="text" class="form-control"></td>
+                                                                    <td>Avg text</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    
+                                                    <h4 class="card-title">TEST RESULT STATUS</h4>
+                                                    <div class="row">
+                                                    	<div class="col-md-6">
+                                                        <label>Remarks</label>
+                                                        <textarea name="" cols="" rows="" class="form-control"></textarea>
+                                                        </div>
+                                                        
+                                                        <div class="col-md-6">
+                                                        <label>Remarks</label>
+                                                        <textarea name="" cols="" rows="" class="form-control"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div><!--accoridian2 end-->
+                                            
+                                        	</div>
+                                        </div>
+                                        
+                                        <div class="tab-pane p-0" id="profile4" role="tabpanel"><!--tab2-->
+                                        	<blockquote>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <b>Colours:</b> Blue
+                                                </div>
+                                                
+                                                <div class="col-md-6">
+                                                    <b>SFPT:</b> Yes
+                                                </div>
+                                            </div>
+                                            </blockquote>
+                                        
+                                        	<div id="accordian-3">
+                                            <div class="card">
+                                                <a class="card-header bg-dark" id="heading12" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                                    <button class="btn btn-link collapsed">
+                                                        <h5 class="mb-0">Test 1</h5>
+                                                    </button>
+                                                </a>
+                                                <div id="collapse1" class="collapse show" aria-labelledby="heading12" data-parent="#accordian-3" style="">
+                                                    <div class="card-body">
+                                                    	<div class="row">
+                                                        	<div class="col-md-6">
+                                                            	<label for="wdep">Test Name</label>
+                                                            	<input name="" type="text" class="form-control" disabled value="sample value">
+                                                            </div>
+                                                            
+                                                            <div class="col-md-6">
+                                                            	<label for="wdep">Test Method</label>
+                                                            	<input name="" type="text" class="form-control" disabled value="sample value">
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        
+                                                        <div class="alert alert-success">
+                                                        <p class="p-10 m-0"><b>Sub Tittle: </b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a augue orci. Sed et elit ex. Fusce quis justo et ex condimentum posuere et vel erat. Sed rutrum ac ligula quis malesuada. Nam pretium dolor quis lectus condimentum, nec lacinia dolor suscipit. Quisque sollicitudin finibus.</p>
+                                                        </div>
+                                                        
+                                                        <div class="table-responsive">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Parameter</th>
+                                                                    <th>Requirements</th>
+                                                                    <th>Test 1</th>
+                                                                    <th>Test 2</th>
+                                                                    <th>Test 3</th>
+                                                                    <th>Avg</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Wrap</td>
+                                                                    <td>2.016F </td>
+                                                                    <td><input name="" type="text" class="form-control"></td>
+                                                                    <td><input name="" type="text" class="form-control"></td>
+                                                                    <td><input name="" type="text" class="form-control"></td>
+                                                                    <td>Avg text</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Wrap</td>
+                                                                    <td>2.016F </td>
+                                                                    <td><input name="" type="text" class="form-control"></td>
+                                                                    <td><input name="" type="text" class="form-control"></td>
+                                                                    <td><input name="" type="text" class="form-control"></td>
+                                                                    <td>Avg text</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Wrap</td>
+                                                                    <td>2.016F </td>
+                                                                    <td><input name="" type="text" class="form-control"></td>
+                                                                    <td><input name="" type="text" class="form-control"></td>
+                                                                    <td><input name="" type="text" class="form-control"></td>
+                                                                    <td>Avg text</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    
+                                                    <h4 class="card-title">TEST RESULT STATUS</h4>
+                                                    <div class="row">
+                                                    	<div class="col-md-6">
+                                                        <label>Remarks</label>
+                                                        <textarea name="" cols="" rows="" class="form-control"></textarea>
+                                                        </div>
+                                                        
+                                                        <div class="col-md-6">
+                                                        <label>Remarks</label>
+                                                        <textarea name="" cols="" rows="" class="form-control"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="card"><!--accoridian2-->
+                                                <a class="card-header bg-dark" id="heading23" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                                    <button class="btn btn-link collapsed">
+                                                        <h5 class="mb-0">Test 2</h5>
+                                                    </button>
+                                                </a>
+                                                <div id="collapse2" class="collapse" aria-labelledby="heading23" data-parent="#accordian-3">
+                                                    <div class="card-body">
+                                                       <div class="row">
+                                                        	<div class="col-md-6">
+                                                            	<label for="wdep">Test Name</label>
+                                                            	<input name="" type="text" class="form-control" disabled value="sample value">
+                                                            </div>
+                                                            
+                                                            <div class="col-md-6">
+                                                            	<label for="wdep">Test Method</label>
+                                                            	<input name="" type="text" class="form-control" disabled value="sample value">
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        
+                                                        <div class="alert alert-success">
+                                                        <p class="p-10 m-0"><b>Sub Tittle: </b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a augue orci. Sed et elit ex. Fusce quis justo et ex condimentum posuere et vel erat. Sed rutrum ac ligula quis malesuada. Nam pretium dolor quis lectus condimentum, nec lacinia dolor suscipit. Quisque sollicitudin finibus.</p>
+                                                        </div>
+                                                        
+                                                        <div class="table-responsive">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Parameter</th>
+                                                                    <th>Requirements</th>
+                                                                    <th>Test 1</th>
+                                                                    <th>Test 2</th>
+                                                                    <th>Test 3</th>
+                                                                    <th>Avg</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Wrap</td>
+                                                                    <td>2.016F </td>
+                                                                    <td><input name="" type="text" class="form-control"></td>
+                                                                    <td><input name="" type="text" class="form-control"></td>
+                                                                    <td><input name="" type="text" class="form-control"></td>
+                                                                    <td>Avg text</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Wrap</td>
+                                                                    <td>2.016F </td>
+                                                                    <td><input name="" type="text" class="form-control"></td>
+                                                                    <td><input name="" type="text" class="form-control"></td>
+                                                                    <td><input name="" type="text" class="form-control"></td>
+                                                                    <td>Avg text</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Wrap</td>
+                                                                    <td>2.016F </td>
+                                                                    <td><input name="" type="text" class="form-control"></td>
+                                                                    <td><input name="" type="text" class="form-control"></td>
+                                                                    <td><input name="" type="text" class="form-control"></td>
+                                                                    <td>Avg text</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    
+                                                    <h4 class="card-title">TEST RESULT STATUS</h4>
+                                                    <div class="row">
+                                                    	<div class="col-md-6">
+                                                        <label>Remarks</label>
+                                                        <textarea name="" cols="" rows="" class="form-control"></textarea>
+                                                        </div>
+                                                        
+                                                        <div class="col-md-6">
+                                                        <label>Remarks</label>
+                                                        <textarea name="" cols="" rows="" class="form-control"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div><!--accoridian2 end-->
+                                            
+                                        	</div>
+                                        </div><!--tab2 end-->
+                                        
+                                        <div class="tab-pane p-20" id="messages4" role="tabpanel"><!--tab3-->
+                                        	coming soon
+                                        </div><!--tab3 end-->
+                                    </div>
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                
+                
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- End Page wrapper  -->
+
+        <footer class="footer">
+            &copy; 2020 Right Solutions
+        </footer>
+       
+       
+    </div>
+    <!-- End Wrapper -->
+    
+    <script src="assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
+    <script src="assets/node_modules/popper/popper.min.js"></script>
+    <script src="assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="dist/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="dist/js/waves.js"></script>
+    <script src="dist/js/sidebarmenu.js"></script>
+    <script src="assets/node_modules/sticky-kit-master/dist/sticky-kit.min.js"></script>
+    <script src="assets/node_modules/sparkline/jquery.sparkline.min.js"></script>
+    <script src="dist/js/custom.min.js"></script>
+    
+    <script src="dist/js/pages/validation.min.js"></script>
+    <script>
+    ! function(window, document, $) {
+        "use strict";
+        $("input,select,textarea").not("[type=submit]").jqBootstrapValidation();
+    }(window, document, jQuery);
+    </script>
+    
+    <script src="dist/js/pages/jasny-bootstrap.js"></script>
+    
+    
+</body>
+
+</html>

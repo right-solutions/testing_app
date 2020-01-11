@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+    <title>Look Ups</title>
+    <link href="dist/css/style.css" rel="stylesheet">
+    <link href="assets/node_modules/wizard/steps.css" rel="stylesheet">
+    <link href="assets/node_modules/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css">
+    <link rel="stylesheet" type="text/css" href="assets/node_modules/datatables.net-bs4/css/responsive.dataTables.min.css">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="fixed-layout skin-green-dark">
+    <div class="preloader">
+      <div class="loader">
+        <div class="loader__figure"></div>
+        <p class="loader__label">Right Solutions</p>
+      </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+      <!-- ============================================================== -->
+      <!-- Topbar header - style you can find in pages.scss -->
+      <!-- ============================================================== -->
+      <header class="topbar">
+        <nav class="navbar top-navbar navbar-expand-md navbar-dark" style="height: 5vh;">
+          <!-- ============================================================== -->
+          <!-- Logo -->
+          <!-- ============================================================== -->
+          <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">
+              <!-- Logo icon -->
+              <b>
+                <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                <!-- Dark Logo icon -->
+                <!-- <img src="assets/images/logo-icon.png" alt="homepage" class="dark-logo" /> -->
+                <!-- Light Logo icon -->
+                <!-- <img src="assets/images/logo-light-icon.png" alt="homepage" class="light-logo" /> -->
+              </b>
+              <!--End Logo icon -->
+              <!-- Logo text -->
+              <span>
+                <!-- dark Logo text -->
+                <!-- <img src="assets/images/logo-text.png" alt="homepage" class="dark-logo" /> -->
+                <!-- Light Logo text -->
+                <img src="assets/images/logo-light-text.png" class="light-logo" alt="homepage" />
+              </span>
+            </a>
+          </div>
+          <!-- ============================================================== -->
+          <!-- End Logo -->
+          <!-- ============================================================== -->
+          <div class="navbar-collapse">
+            <!-- ============================================================== -->
+            <!-- toggle and nav items -->
+            <!-- ============================================================== -->
+            <ul class="navbar-nav mr-auto">
+              <!-- This is  -->
+              <li class="nav-item"> <a class="nav-link nav-toggler d-block d-md-none waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+              <li class="nav-item"> <a class="nav-link sidebartoggler d-none d-lg-block d-md-block waves-effect waves-dark" href="javascript:void(0)"><i class="icon-menu"></i></a> </li>
+              <!-- ============================================================== -->
+              <!-- Search -->
+              <!-- ============================================================== -->
+              <!-- <li class="nav-item">
+                <form class="app-search d-none d-md-block d-lg-block">
+                  <input type="text" class="form-control" placeholder="Search & enter">
+                </form>
+              </li> -->
+            </ul>
+
+            <ul class="navbar-nav my-lg-0">
+              <!-- ============================================================== -->
+              <!-- Comment -->
+              <!-- ============================================================== -->
+              <li class="nav-item">
+                <a class="nav-link" href="" > 
+                John Dalton
+                <img src="assets/images/users/2.jpg" alt="user-img" class="img-circle" style="height:34px;">
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href=""> 
+                <i class="fas fa-sign-out-alt"></i>
+                </a>
+              </li>
+              
+            </ul>
+            <!-- ============================================================== -->
+            <!-- User profile and search -->
+            <!-- ============================================================== -->
+          </div>
+        </nav>
+      </header>
+      <!-- ============================================================== -->
+      <!-- End Topbar header -->
+      <!-- ============================================================== -->
+      <!-- ============================================================== -->
+      <!-- Left Sidebar - style you can find in sidebar.scss  -->
+      <!-- ============================================================== -->
+      <aside class="left-sidebar">
+        <!-- Sidebar scroll-->
+        <div class="scroll-sidebar">
+          <!-- Sidebar navigation-->
+          <nav class="sidebar-nav">
+            <ul id="sidebarnav">
+              <li class="nav-small-cap"></li>
+              <li> <a class="waves-effect waves-dark" href="dashboard.html"><i class="icon-speedometer"></i><span class="hide-menu">Dashboard</span></a></li>
+              <li> <a class="waves-effect waves-dark" href="test_requests.html"><i class="icon-layers"></i><span class="hide-menu">Test Requests</span></a></li>
+              <li> <a class="waves-effect waves-dark" href="worksheets.html"><i class="ti-files"></i><span class="hide-menu">Worksheets</span></a></li>
+              
+              <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icon-docs"></i><span class="hide-menu">Reports</span></a>
+                <ul aria-expanded="false" class="collapse">
+                  <li><a href="reports.html"><i class="icon-docs mr-2"></i>Report 1</a></li>
+                  <li><a href="reports.html"><i class="icon-docs mr-2"></i>Report 2</a></li>
+                  <li><a href="reports.html"><i class="icon-docs mr-2"></i>Report 3</a></li>
+                </ul>
+              </li>
+
+              <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="ti-settings"></i><span class="hide-menu">Admin</span></a>
+                <ul aria-expanded="false" class="collapse">
+                  <li><a href="manage_users.html"><i class="icon-people mr-2"></i>Manage Users</a></li>
+                  <li class="active"><a href="look_ups.html"><i class="fa fa-th-list mr-2"></i>Look Ups</a></li>
+                  <li><a href="settings.html"><i class="ti-settings mr-2"></i>Settings</a></li>
+                </ul>
+              </li>
+
+            </ul>
+          </nav>
+          <!-- End Sidebar navigation -->
+        </div>
+        <!-- End Sidebar scroll-->
+      </aside>
+      <!-- ============================================================== -->
+      <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+      <!-- ============================================================== -->
+      <!-- ============================================================== -->
+      <!-- Page wrapper  -->
+      <!-- ============================================================== -->
+      <div class="page-wrapper" style="padding-top: 7vh;">
+        <!-- ============================================================== -->
+        <!-- Container fluid  -->
+        <!-- ============================================================== -->
+        <div class="container-fluid">
+          <!-- ============================================================== -->
+          <!-- Bread crumb and right sidebar toggle -->
+          <!-- ============================================================== -->
+          <div class="row page-titles">
+            <div class="col-md-5 align-self-center">
+              <h4 class="text-themecolor">Test Requests</h4>
+            </div>
+            <div class="col-md-7 align-self-center text-right">
+              <div class="d-flex justify-content-end align-items-center">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                  <li class="breadcrumb-item active">Test Requests</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          <!-- ============================================================== -->
+          <!-- End Bread crumb and right sidebar toggle -->
+          <!-- ============================================================== -->
+          <!-- ============================================================== -->
+          <!-- Start Page Content -->
+          <!-- ============================================================== -->
+          <!-- row -->
+          <!-- Validation wizard -->
+          <div class="row" id="validation">
+            <div class="col-12">
+              <div class="card wizard-content">
+                <div class="card">
+                  <div class="card-body">
+                    <!-- <h4 class="card-title">Data Table</h4>
+                      <h6 class="card-subtitle">Data table example</h6> -->
+                    <br>
+                    <div class="container-fluid">
+                      <div class="row mb-2">
+                        <div class="col-md-8">
+
+                          <!-- Add Button -->
+                          <a class="btn btn-primary mr-2" data-remote="true" href="new_test_reqeust.html">
+                            <span class="fa fa-plus"></span> New Look Up
+                          </a>
+
+                          <!-- Refresh & Filter Button Group -->
+                          <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary">
+                              <a href="#"><i class="fa fa-sync-alt"></i> Refresh</a>
+                            </button>
+                            <button type="button" class="btn btn-secondary">
+                              <a href="#"><i class="fa fa-filter"></i> Filter</a>
+                            </button>
+                          </div>
+
+                          <!-- Columns & Export Button Group -->
+                          <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary">
+                              <a href="#"><i class="fa fa-file-excel"></i> Excel</a>
+                            </button>
+                            <button type="button" class="btn btn-secondary">
+                              <a href="#"><i class="fa fa-file-csv"></i> CSV</a>
+                            </button>
+                          </div>
+                          
+                        </div>
+
+                        <div class="col-md-4 col-xs-12 mt-2 mt-sm-0">
+                          <form class="pull-right" id="new_leave_request" style="margin-bottom:0px;width:100%;" action="http://localhost:9001/7/leave_requests?called_from=index&amp;locale=en" accept-charset="UTF-8" data-remote="true" method="get"><input name="utf8" type="hidden" value="✓"><div class="input-group"><input type="hidden" name="site_id" id="site_id" value="7"><input type="text" name="q" id="q" value="" class="form-control" placeholder="Search ..."><span class="input-group-append"><button name="button" type="submit" class="btn btn-primary"><i class="fa fa-search"></i><span class="btn-text hidden-sm hidden-xs"> Search!</span></button></span></div></form>
+                        </div>
+                        
+                      </div>
+                      <div class="row" style="border: 1px solid #c1c1c1;padding: 25px; display:none;">
+                        <!-- <div class="col-md-12">
+                          <h3>Filter: </h3>
+                        </div> -->
+                        <div class="col-md-2">
+                          <div class="form-group">
+                            <label for="wApplicant"> Report Number : <span class="danger">*</span> </label>
+                            <input type="text" class="form-control " id="wApplicant" name="applicant">
+                          </div>
+                        </div>
+                        <div class="col-md-2">
+                          <div class="form-group">
+                            <label for="wAddress"> Submited Date : <span class="danger">*</span> </label>
+                            <input type="text" class="form-control " id="wAddress" name="address">
+                          </div>
+                        </div>
+                        <div class="col-md-2">
+                          <div class="form-group">
+                            <label for="wATTIN"> ATTIN : <span class="danger">*</span> </label>
+                            <input type="text" class="form-control " id="wATTIN" name="attin">
+                          </div>
+                        </div>
+                        <div class="col-lg-2">
+                          <div class="form-group">
+                            <label for="wATTIN"> Service Type : <span class="danger">*</span> </label>
+                            <select name="" class="form-control">
+                              <option selected> -- Select -- </option>
+                              <option>Regular</option>
+                              <option>Option 2</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-lg-2">
+                          <div class="form-group">
+                            <label for="wATTIN"> Buyer : <span class="danger">*</span> </label>
+                            <select name="" class="form-control">
+                              <option selected> -- Select -- </option>
+                              <option>Gap</option>
+                              <option>Raymond</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-lg-2">
+                          <div class="form-group">
+                            <label for="wATTIN"> Report Type : <span class="danger">*</span> </label>
+                            <select name="" class="form-control">
+                              <option selected> --Select -- </option>
+                              <option>Self Reference</option>
+                              <option>Option 2</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="actions clearfix  col-lg-12">
+                          <button type="submit" class="btn btn-success" style="float: right; margin-left: 10px" >Apply</button>
+                          <button type="submit" class="btn btn-dark" style="float: right;" >Cancel</button>
+<!--                           <ul role="menu" aria-label="Pagination">
+                            <li class="disabled" aria-disabled="true"><a href="#previous" role="menuitem">Cancel</a></li>
+                            <li aria-hidden="true"><a href="#finish" role="menuitem">Apply</a></li>
+                          </ul> -->
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="table-responsive m-t-10">
+                      <table id="myTable" class="table table-bordered table-striped color-table muted-table">
+                        <thead>
+                          <tr>
+                            <th>Sl. No.</th>
+                            <th>Code</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Value</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          
+                          <tr>
+                            <td>1</td>
+                            <td><a href='#'> LK-1234-XA1 </a></td>
+                            <td>Name 1</td>
+                            <td>Description 1</td>
+                            <td>Value 1</td>
+                            <td><span class="label label-success">Active</span></td>
+                            <td>Edit | Delete</td>
+                          </tr>
+
+                          <tr>
+                            <td>1</td>
+                            <td><a href='#'> LK-1234-XA1 </a></td>
+                            <td>Name 1</td>
+                            <td>Description 1</td>
+                            <td>Value 1</td>
+                            <td><span class="label label-success">Active</span></td>
+                            <td>Edit | Delete</td>
+                          </tr>
+
+                          <tr>
+                            <td>1</td>
+                            <td><a href='#'> LK-1234-XA1 </a></td>
+                            <td>Name 1</td>
+                            <td>Description 1</td>
+                            <td>Value 1</td>
+                            <td><span class="label label-success">Active</span></td>
+                            <td>Edit | Delete</td>
+                          </tr>
+
+                          <tr>
+                            <td>1</td>
+                            <td><a href='#'> LK-1234-XA1 </a></td>
+                            <td>Name 1</td>
+                            <td>Description 1</td>
+                            <td>Value 1</td>
+                            <td><span class="label label-info">Pending</span></td>
+                            <td>Edit | Delete</td>
+                          </tr>
+
+                          <tr>
+                            <td>1</td>
+                            <td><a href='#'> LK-1234-XA1 </a></td>
+                            <td>Name 1</td>
+                            <td>Description 1</td>
+                            <td>Value 1</td>
+                            <td><span class="label label-danger">Removed</span></td>
+                            <td>Edit | Delete</td>
+                          </tr>
+                         
+                        </tbody>
+                      </table>
+                    </div>
+                      
+                    <!-- ============================================================== -->
+                    <!-- End Container fluid  -->
+                    <!-- ============================================================== -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+        </div>
+        <!-- End container-fluid -->
+
+      </div>
+      <!-- End Page Wrapper -->
+
+      <footer class="footer">
+        <div style="float:left;">&copy; 2020 COMPANY NAME</div>
+        <div style="float:right;">Designed, Developed & Maintained by <a href="http://rightsolutions.ae" target="_blank">Right Solutions</a></div>
+        <div style="clear:both;"></div>
+      </footer>
+
+    </div>
+    <!-- End Wrapper -->
+
+
+    <script src="assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
+    <script src="assets/node_modules/popper/popper.min.js"></script>
+    <script src="assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="dist/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="dist/js/waves.js"></script>
+    <script src="dist/js/sidebarmenu.js"></script>
+    <script src="dist/js/custom.min.js"></script>
+    <script src="dist/js/pages/validation.min.js"></script>
+    <!-- This is data table -->
+    <script src="assets/node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="assets/node_modules/datatables.net-bs4/js/dataTables.responsive.min.js"></script>
+    <!-- start - This is for export functionality only -->
+    <script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.flash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
+    <!-- end - This is for export functionality only -->
+    <script>
+      ! function(window, document, $) {
+        "use strict";
+        $("input,select,textarea").not("[type=submit]").jqBootstrapValidation();
+      }(window, document, jQuery);
+    </script>
+    <script src="dist/js/pages/jasny-bootstrap.js"></script>
+    <script>
+      $(function () {
+        $(function () {
+        var table = $('#myTable').DataTable({
+          "bInfo": false,
+          "lengthChange": false,
+          "responsive": true,
+          "searching": false,
+          "paging": true,
+          "ordering": true,
+          "order": [
+            [1, 'asc']
+          ]
+        });
+      });
+      });
+    </script>
+  </body>
+</html>

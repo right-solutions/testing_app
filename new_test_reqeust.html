@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
-    <title>Test Monitoring App</title>
+    <title>Test Request Form</title>
     
     <link href="dist/css/style.css" rel="stylesheet">
     <link href="assets/node_modules/wizard/steps.css" rel="stylesheet">
@@ -117,16 +117,29 @@
                 
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
-                    <ul id="sidebarnav">
-                        <li class="nav-small-cap"></li>
-                          <li> <a class="waves-effect waves-dark" href="javascript:void(0)"><i class="icon-speedometer"></i><span class="hide-menu">Dashboard</span></a>
-                            <li> <a class="waves-effect waves-dark" href="javascript:void(0)"><i class="icon-speedometer"></i><span class="hide-menu">Menu One</span></a>
-                            <li> <a class="waves-effect waves-dark" href="javascript:void(0)"><i class="icon-speedometer"></i><span class="hide-menu">Menu Two</span></a>
-                            <li> <a class="waves-effect waves-dark" href="javascript:void(0)"><i class="icon-speedometer"></i><span class="hide-menu">Menu Three</span></a>
-                            <li> <a class="waves-effect waves-dark" href="javascript:void(0)"><i class="icon-speedometer"></i><span class="hide-menu">Menu Four</span></a>
-                            <li> <a class="waves-effect waves-dark" href="javascript:void(0)"><i class="icon-speedometer"></i><span class="hide-menu">Menu Five</span></a>
-                        </li>
-                    </ul>
+                  <ul id="sidebarnav">
+                    <li class="nav-small-cap"></li>
+                    <li> <a class="waves-effect waves-dark" href="dashboard.html"><i class="icon-speedometer"></i><span class="hide-menu">Dashboard</span></a></li>
+                    <li class="active"> <a class="waves-effect waves-dark" href="test_requests.html"><i class="icon-layers"></i><span class="hide-menu">Test Requests</span></a></li>
+                    <li> <a class="waves-effect waves-dark" href="worksheets.html"><i class="ti-files"></i><span class="hide-menu">Worksheets</span></a></li>
+                    
+                    <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icon-docs"></i><span class="hide-menu">Reports</span></a>
+                      <ul aria-expanded="false" class="collapse">
+                        <li><a href="reports.html"><i class="icon-docs mr-2"></i>Report 1</a></li>
+                        <li><a href="reports.html"><i class="icon-docs mr-2"></i>Report 2</a></li>
+                        <li><a href="reports.html"><i class="icon-docs mr-2"></i>Report 3</a></li>
+                      </ul>
+                    </li>
+
+                    <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="ti-settings"></i><span class="hide-menu">Admin</span></a>
+                      <ul aria-expanded="false" class="collapse">
+                        <li><a href="manage_users.html"><i class="icon-people mr-2"></i>Manage Users</a></li>
+                        <li><a href="look_ups.html"><i class="fa fa-th-list mr-2"></i>Look Ups</a></li>
+                        <li><a href="settings.html"><i class="ti-settings mr-2"></i>Settings</a></li>
+                      </ul>
+                    </li>
+
+                  </ul>
                 </nav>
                 <!-- End Sidebar navigation -->
             </div>
@@ -153,8 +166,9 @@
                     <div class="col-md-7 align-self-center text-right">
                         <div class="d-flex justify-content-end align-items-center">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                                <li class="breadcrumb-item active">Test Monitoring App</li>
+                              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                              <li class="breadcrumb-item"><a href="test_requests.html">Test Requests</a></li>
+                              <li class="breadcrumb-item active">Test Request Form</li>
                             </ol>
                         </div>
                     </div>

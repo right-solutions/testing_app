@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
-    <title>Login</title>
+    <title>Testing App</title>
 
     <!-- page css -->
     <link href="dist/css/pages/login-register-lock.css" rel="stylesheet">
@@ -42,58 +42,26 @@
     <section id="wrapper">
       <div class="login-register" style="background-color: #dce0e4;"> 
         <!-- <div class="login-register" style="background-color: #2b2b2b;"> -->
-        <div class="login-box card">
+        <div class="login-box card" style="width:800px;">
           <div class="card-body">
-            <form class="form-horizontal form-material" id="loginform" action="index.html">
-              <h3 class="text-center m-b-20">Log In</h3>
-              <div class="form-group ">
-                <div class="col-xs-12">
-                  <input class="form-control" type="text" required="" placeholder="Username"> 
-                </div>
+
+
+            <div class="row">
+              <div class="col-sm-12 align-self-center">
+                <h4 class="text-themecolor text-center pb-3">Index</h4>
               </div>
-              <div class="form-group">
-                <div class="col-xs-12">
-                  <input class="form-control" type="password" required="" placeholder="Password">
-                </div>
-              </div>
-              <div class="form-group row">
-                <div class="col-md-12">
-                  <div class="d-flex no-block align-items-center">
-                    <div class="custom-control custom-checkbox">
-                      <input type="checkbox" class="custom-control-input" id="customCheck1">
-                      <label class="custom-control-label" for="customCheck1">Remember me</label>
-                    </div> 
-                    <div class="ml-auto">
-                      <a href="javascript:void(0)" id="to-recover" class="text-muted"><i class="fas fa-lock m-r-5"></i> Forgot pwd?</a> 
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group text-center">
-                <div class="col-xs-12 p-b-20">
-                  <button class="btn btn-block btn-lg btn-primary btn-rounded" type="submit">Log In</button>
-                </div>
-              </div>
-            </form>
-            <form class="form-horizontal" id="recoverform" action="index.html">
-              <div class="form-group ">
-                <div class="col-xs-12">
-                  <h3>Recover Password</h3>
-                  <p class="text-muted">Enter your Email and instructions will be sent to you! </p>
-                </div>
-              </div>
-              <div class="form-group ">
-                <div class="col-xs-12">
-                  <input class="form-control" type="text" required="" placeholder="Email"> 
-                </div>
-              </div>
-              <div class="form-group text-center m-t-20">
-                <div class="col-xs-12">
-                  <button class="btn btn-primary btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">Reset</button>
-                  <button class="btn btn-primary btn-lg btn-block btn-dark text-uppercase waves-effect waves-light" id="cancel-recover">Cancel</button>
-                </div>
-              </div>
-            </form>
+              
+              <ul class="list-group pb-3" style="width:80%;margin: 0px auto;">
+                <li class="list-group-item"><a href="login.html" aria-expanded="true">Login Screen</a></li>
+                <li class="list-group-item"><a href="new_test_reqeust.html" aria-expanded="true">New Test Request</a> </li>
+                <li class="list-group-item"><a href="test_requests.html" aria-expanded="true">Test Requests</a> </li>
+                <li class="list-group-item"><a href="worksheets.html" aria-expanded="true">Worksheets</a> </li>
+                <li class="list-group-item"><a href="worksheet_details.html" aria-expanded="true">Worksheet Detail</a> </li>
+                <li class="list-group-item"><a href="look_up_list.html" aria-expanded="true">Look Ups</a> </li>
+              </ul>
+
+            </div>
+           
           </div>
         </div>
       </div>
