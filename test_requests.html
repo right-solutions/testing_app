@@ -200,7 +200,7 @@
                               <a href="#"><i class="fa fa-sync-alt"></i> Refresh</a>
                             </button>
                             <button type="button" class="btn btn-secondary">
-                              <a href="#"><i class="fa fa-filter"></i> Filter</a>
+                              <a href="javascript:void(0)" onclick="$('#myTableFilter').toggle();"><i class="fa fa-filter"></i> Filter</a>
                             </button>
                           </div>
 
@@ -221,7 +221,7 @@
                         </div>
                         
                       </div>
-                      <div class="row" style="border: 1px solid #c1c1c1;padding: 25px; ">
+                      <div class="row" id="myTableFilter" style="border: 1px solid #c1c1c1;padding: 25px; margin:2px; display:none;">
                         <!-- <div class="col-md-12">
                           <h3>Filter: </h3>
                         </div> -->
@@ -276,19 +276,27 @@
 
                         <div class="actions clearfix  col-lg-12">
                           <button type="submit" class="btn btn-success" style="float: right; margin-left: 10px" >Apply</button>
-                          <button type="submit" class="btn btn-dark" style="float: right;" >Cancel</button>
-<!--                           <ul role="menu" aria-label="Pagination">
+                          <button type="submit" class="btn btn-dark" style="float: right;" onclick="$('#myTableFilter').toggle();" >Cancel</button>
+                          <!-- <ul role="menu" aria-label="Pagination">
                             <li class="disabled" aria-disabled="true"><a href="#previous" role="menuitem">Cancel</a></li>
                             <li aria-hidden="true"><a href="#finish" role="menuitem">Apply</a></li>
                           </ul> -->
                         </div>
 
                       </div>
+
+                      <div class="row mb-2">
+                        <div class="col-md-12 p-2">
+                          Use <span class='label label-info'> Shift </span> and mouse to scroll horizontal.
+                        </div>
+                      </div>
                     </div>
-                    <div class="table-responsive m-t-40">
+
+                    <div class="table-responsive m-t-10">
                       <table id="myTable" class="table table-bordered table-striped color-table muted-table">
                         <thead>
                           <tr>
+                            <th></th>
                             <th>Sl. No.</th>
                             <th>Test Request ID</th>
                             <th>Test Status</th>
@@ -308,6 +316,7 @@
                         <tbody>
                           
                           <tr>
+                            <td></td>
                             <td>1</td>
                             <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
                             <td><span class="label label-info">On Process</span></td>
@@ -325,6 +334,7 @@
                           </tr>
 
                           <tr>
+                            <td></td>
                             <td>1</td>
                             <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
                             <td><span class="label label-success">Report Issued</span></td>
@@ -342,6 +352,7 @@
                           </tr>
 
                           <tr>
+                            <td></td>
                             <td>1</td>
                             <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
                             <td><span class="label label-danger">Pending</span></td>
@@ -359,6 +370,7 @@
                           </tr>
 
                           <tr>
+                            <td></td>
                             <td>1</td>
                             <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
                             <td><span class="label label-info">On Process</span></td>
@@ -376,6 +388,7 @@
                           </tr>
 
                           <tr>
+                            <td></td>
                             <td>1</td>
                             <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
                             <td><span class="label label-info">On Process</span></td>
@@ -393,6 +406,7 @@
                           </tr>
 
                           <tr>
+                            <td></td>
                             <td>1</td>
                             <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
                             <td><span class="label label-success">Report Issued</span></td>
@@ -410,6 +424,7 @@
                           </tr>
 
                           <tr>
+                            <td></td>
                             <td>1</td>
                             <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
                             <td><span class="label label-success">Report Issued</span></td>
@@ -427,6 +442,7 @@
                           </tr>
 
                           <tr>
+                            <td></td>
                             <td>1</td>
                             <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
                             <td><span class="label label-danger">Pending</span></td>
@@ -444,6 +460,7 @@
                           </tr>
 
                           <tr>
+                            <td></td>
                             <td>1</td>
                             <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
                             <td><span class="label label-danger">Pending</span></td>
@@ -461,6 +478,7 @@
                           </tr>
 
                           <tr>
+                            <td></td>
                             <td>1</td>
                             <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
                             <td><span class="label label-danger">Pending</span></td>
@@ -478,6 +496,7 @@
                           </tr>
 
                           <tr>
+                            <td></td>
                             <td>1</td>
                             <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
                             <td><span class="label label-info">On Process</span></td>
@@ -522,6 +541,14 @@
     </div>
     <!-- End Wrapper -->
 
+    <style type="text/css">
+      .td-nowrap { white-space: nowrap; }
+      #myTable_paginate { padding-top: 20px; }
+      #myTable th, #myTable td {
+        padding: 1rem;
+      }
+    </style>
+
 
     <script src="assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
     <script src="assets/node_modules/popper/popper.min.js"></script>
@@ -562,7 +589,21 @@
           "ordering": true,
           "order": [
             [1, 'asc']
-          ]
+          ],
+          "columnDefs": [
+            { 
+              "className": "text-center td-nowrap", 
+              "targets": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ] 
+            }
+          ],
+          // "scrollY": 500,
+          // "scrollX": true,
+          // "scrollCollapse": true,
+          // "fixedHeader": true,
+          // "fixedColumns": {
+          //   "leftColumns": 1,
+          //   "rightColumns": 2
+          // }
         });
       });
       });
