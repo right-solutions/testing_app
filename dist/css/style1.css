@@ -22148,67 +22148,8 @@ File: scss
 	padding-bottom:6px;
 }
 
-.worksheet-page .card-header{
-	text-decoration:none !important;
-}
-
-.worksheet-page .card-header button h5{
-	text-transform:uppercase !important;
-	font-weight:600;
-	color:#CCCCCC;
-}
-
-.worksheet-page .card-header button{
-	padding:0px !important;
-}
-
-.worksheet-page label{
-	font-weight:400;
-}
-
-.worksheet-page-top  label{
-	font-weight:400;
-	margin:0px;
-	padding:0px;
-}
 
 
-.worksheet-page-top .col-md-3{
-	padding-top:6px;
-	padding-bottom:6px;
-}
-
-
-.tabs-vertical li .nav-link.active, .tabs-vertical li .nav-link:hover, .tabs-vertical li .nav-link.active:focus{
-	background: #15c395 !important;
-}
-
-.button-cons{
-	margin-bottom:25px;
-	margin-top:15px;
-}
-
-a{
-	color:#15c395;
-}
-
-a:hover{
-	color:#15c395;
-}
-
-.btn-group button .btn-outline-success:hover{
-	color:#fff !important;
-}
-
-.page-item.active .page-link{
-	background-color:#15c395;
-	border-color:#15c395;
-}
-
-.page-link:hover,
-.page-link{
-	color:#15c395;
-}
 
 
 
