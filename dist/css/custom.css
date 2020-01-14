@@ -1,0 +1,186 @@
+/*custom styles*/
+
+.cd-horizontal-timeline,
+.cd-horizontal-timeline .events-content{
+	margin:0em !important;
+}
+
+.cd-horizontal-timeline .events-wrapper{
+	margin:auto !important;
+}
+
+.cd-horizontal-timeline .timeline{
+	width:100% !important;
+	max-width:100% !important;
+	padding:0px;
+}
+
+.cd-horizontal-timeline ol{
+	width:100% !important;
+	padding:0px !important;
+}
+
+.cd-horizontal-timeline .events-content li>*{
+	max-width:100% !important;
+}
+
+.cd-horizontal-timeline .events-content li{
+	padding:0% !important;
+}
+
+.cd-horizontal-timeline .events{
+	width:100% !important;
+}
+
+.chklist-row .col-md-4{
+	padding-top:15px !important;
+	padding-bottom:15px !important;
+	margin-top:15px !important;
+	margin-bottom:15px !important;
+}
+
+.testselection .custom-control{
+	padding-top:6px;
+	padding-bottom:6px;
+}
+
+.worksheet-page .card-header{
+	text-decoration:none !important;
+}
+
+.worksheet-page .card-header button h5{
+	text-transform:uppercase !important;
+	font-weight:600;
+	color:#CCCCCC;
+}
+
+.worksheet-page .card-header button{
+	padding:0px !important;
+}
+
+.worksheet-page label{
+	font-weight:400;
+}
+
+.worksheet-page-top  label{
+	font-weight:400;
+	margin:0px;
+	padding:0px;
+}
+
+
+.worksheet-page-top .col-md-3{
+	padding-top:6px;
+	padding-bottom:6px;
+}
+
+.tabs-vertical li .nav-link.active, .tabs-vertical li .nav-link:hover, .tabs-vertical li .nav-link.active:focus{
+	background: #91337d !important;
+}
+
+.button-cons{
+	margin-bottom:25px;
+	margin-top:15px;
+}
+
+a{
+	color:#91337d;
+}
+
+a:hover{
+	color:#71185e;
+}
+
+.btn-group button .btn-outline-success:hover{
+	color:#fff !important;
+}
+
+.page-item.active .page-link{
+	background-color:#91337d;
+	border-color:#91337d;
+}
+
+.page-link:hover,
+.page-link{
+	color:#731a60;
+}
+
+.btn-primary, .btn-primary:focus {
+    background-color: #91337d;
+    border-color: #91337d;
+	color:#FFFFFF;
+}
+
+.btn-primary:hover{
+	background-color:#7b1f67;
+	border-color:#7b1f67;
+}
+
+.form-material .form-control, .form-material .form-control.focus, .form-material .form-control:focus {
+    background-image: linear-gradient(#15c395,#15c395),linear-gradient(#e9ecef,#e9ecef);
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    float: none;
+}
+
+.wizard-content .wizard .actions ul li a{
+	background-color: #91337d;
+}
+
+.wizard-content .wizard>.steps>ul>li.current .step {
+    border-color: #91337d;
+    background-color: #fff;
+    color: #91337d;
+}
+
+.wizard-content .wizard>.steps>ul>li.done .step {
+    background-color: #91337d;
+    border-color: #91337d;
+    color: #fff;
+}
+
+.padding-top{
+	padding-top:50px !important;
+}
+
+.skin-red .topbar{
+	background-color:#91337d;
+}
+
+.skin-red .page-titles .breadcrumb .breadcrumb-item.active,
+.skin-red .sidebar-nav > ul > li.active > a,
+.skin-red .sidebar-nav > ul > li.active > a i,
+.sidebar-nav ul li a:hover{
+	color:#91337d;
+}
+
+.skin-red .sidebar-nav > ul > li.active > a {
+    border-left: 3px solid #91337d;
+}
+
+
+.skin-red {
+  /*Theme Colors*/ }
+  .skin-red .topbar {
+    background:#91337d; }
+  .skin-red .sidebar-nav ul li a.active, .skin-red .sidebar-nav ul li a:hover {
+    color: #91337d; }
+    .skin-red .sidebar-nav ul li a.active i, .skin-red .sidebar-nav ul li a:hover i {
+      color: #91337d; }
+  .skin-red .sidebar-nav > ul > li.active > a {
+    color: #91337d;
+    border-left: 3px solid #91337d; }
+    .skin-red .sidebar-nav > ul > li.active > a i {
+      color: #91337d; }
+  .skin-red .page-titles .breadcrumb .breadcrumb-item.active {
+    color: #91337d; }
+
+
+
+
+
+
+
+
+
