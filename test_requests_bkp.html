@@ -7,13 +7,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
-    <title>Worksheets</title>
+    <title>Test Requests</title>
     <link href="dist/css/style.css" rel="stylesheet">
+    <link href="dist/css/custom.css" rel="stylesheet">
     <link href="assets/node_modules/wizard/steps.css" rel="stylesheet">
     <link href="assets/node_modules/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css">
     <link rel="stylesheet" type="text/css" href="assets/node_modules/datatables.net-bs4/css/responsive.dataTables.min.css">
-    <link href="dist/css/custom.css" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -52,9 +52,9 @@
               <!-- Logo text -->
               <span>
                 <!-- dark Logo text -->
-                <img src="assets/images/logo-text.png" alt="homepage" class="dark-logo" /> 
+                <img src="assets/images/logo-text.png" alt="homepage" class="dark-logo" />
                 <!-- Light Logo text -->
-                <!--<img src="assets/images/logo-light-text.png" class="light-logo" alt="homepage" />-->
+                <!-- <img src="assets/images/logo-light-text.png" class="light-logo" alt="homepage" /> -->
               </span>
             </a>
           </div>
@@ -117,17 +117,22 @@
             <ul id="sidebarnav">
               <li class="nav-small-cap"></li>
               <li> <a class="waves-effect waves-dark" href="dashboard.html"><i class="icon-speedometer"></i><span class="hide-menu">Dashboard</span></a></li>
-              <li> <a class="waves-effect waves-dark" href="test_requests.html"><i class="icon-layers"></i><span class="hide-menu">Test Requests</span></a></li>
-              <li class="active"> <a class="waves-effect waves-dark" href="worksheets.html"><i class="ti-files"></i><span class="hide-menu">Worksheets</span></a></li>
+              <li class="active"> <a class="waves-effect waves-dark" href="test_requests.html"><i class="icon-layers"></i><span class="hide-menu">Test Requests</span></a></li>
+              <li> <a class="waves-effect waves-dark" href="worksheets.html"><i class="ti-files"></i><span class="hide-menu">Worksheets</span></a></li>
               
-              <li> <a class="waves-effect waves-dark" href="report_listing_page.html"><i class="ti-files"></i><span class="hide-menu">Reports</span></a></li>
-              
+              <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icon-docs"></i><span class="hide-menu">Reports</span></a>
+                <ul aria-expanded="false" class="collapse">
+                  <li><a href="report_listing_page.html"><i class="icon-docs mr-2"></i>Report 1</a></li>
+                  <li><a href="report_listing_page.html"><i class="icon-docs mr-2"></i>Report 2</a></li>
+                  <li><a href="report_listing_page.html"><i class="icon-docs mr-2"></i>Report 3</a></li>
+                </ul>
+              </li>
 
               <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="ti-settings"></i><span class="hide-menu">Admin</span></a>
                 <ul aria-expanded="false" class="collapse">
-                  <li><a href="javascript:void(0)"><i class="icon-people mr-2"></i>Manage Users</a></li>
+                  <li><a href="manage_users.html"><i class="icon-people mr-2"></i>Manage Users</a></li>
                   <li><a href="look_ups.html"><i class="fa fa-th-list mr-2"></i>Look Ups</a></li>
-                  <li><a href="javascript:void(0)"><i class="ti-settings mr-2"></i>Settings</a></li>
+                  <li><a href="settings.html"><i class="ti-settings mr-2"></i>Settings</a></li>
                 </ul>
               </li>
 
@@ -153,13 +158,13 @@
           <!-- ============================================================== -->
           <div class="row page-titles">
             <div class="col-md-5 align-self-center">
-              <h4 class="text-themecolor">Worksheets</h4>
+              <h4 class="text-themecolor">Test Requests</h4>
             </div>
             <div class="col-md-7 align-self-center text-right">
               <div class="d-flex justify-content-end align-items-center">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                  <li class="breadcrumb-item active">Worksheets</li>
+                  <li class="breadcrumb-item active">Test Requests</li>
                 </ol>
               </div>
             </div>
@@ -186,17 +191,17 @@
                         <div class="col-md-8">
 
                           <!-- Add Button -->
-<!--                           <a class="btn btn-primary mr-2" data-remote="true" href="create_worksheet.html" target="_blank" >
-                            <span class="fa fa-plus"></span> New Worksheet
-                          </a> -->
+                          <a class="btn btn-primary mr-2" data-remote="true" href="new_test_reqeust.html">
+                            <span class="fa fa-plus"></span> New Test Request
+                          </a>
 
                           <!-- Refresh & Filter Button Group -->
                           <div class="btn-group" role="group" aria-label="Basic example">
                             <button type="button" class="btn btn-secondary">
-                              <a href="#"><i class="fa fa-sync-alt"></i> </a>
+                              <a href="#"><i class="fa fa-sync-alt"></i></a>
                             </button>
                             <button type="button" class="btn btn-secondary">
-                              <a href="#"><i class="fa fa-filter"></i> </a>
+                              <a href="#"><i class="fa fa-filter"></i></a>
                             </button>
                           </div>
 
@@ -217,7 +222,7 @@
                         </div>
                         
                       </div>
-                      <div class="row" style="border: 1px solid #c1c1c1;padding: 25px;display:none;">
+                      <div class="row mt-3" style="border: 1px solid #ebeff3; padding: 25px; background-color: #ebeff3; ">
                         <!-- <div class="col-md-12">
                           <h3>Filter: </h3>
                         </div> -->
@@ -271,255 +276,224 @@
                         </div>
 
                         <div class="actions clearfix  col-lg-12">
-                          <button type="submit" class="btn btn-success" style="float: right; margin-left: 10px" >Apply</button>
+                          <button type="submit" class="btn btn-primary" style="float: right; margin-left: 10px" >Apply</button>
                           <button type="submit" class="btn btn-dark" style="float: right;" >Cancel</button>
-                        <!-- <ul role="menu" aria-label="Pagination">
-                          <li class="disabled" aria-disabled="true"><a href="#previous" role="menuitem">Cancel</a></li>
-                          <li aria-hidden="true"><a href="#finish" role="menuitem">Apply</a></li>
-                        </ul> -->
+<!--                           <ul role="menu" aria-label="Pagination">
+                            <li class="disabled" aria-disabled="true"><a href="#previous" role="menuitem">Cancel</a></li>
+                            <li aria-hidden="true"><a href="#finish" role="menuitem">Apply</a></li>
+                          </ul> -->
                         </div>
 
                       </div>
                     </div>
-                    <div class="table-responsive m-t-10">
+                    <div class="table-responsive m-t-40">
                       <table id="myTable" class="table table-bordered table-striped color-table muted-table">
                         <thead>
                           <tr>
                             <th>Sl. No.</th>
-                            <th>Worksheet ID</th>
                             <th>Test Request ID</th>
+                            <th>Test Status</th>
+                            <th>Date Started</th>
+                            <th>PI No</th>
+                            <th>Color No</th>
+                            <th>Test Report ID</th>
+                            <th>Submitted Date</th>
+                            <th>Last Modified Date</th>
                             <th>Buyer</th>
-                            <th>Service Type</th>
-                            <th>Created Date</th>
-                            <th>Status</th>
+                            <th>Applicant</th>
+                            <th>Report Generated Date</th>
+                            <th>Revision</th>
+                            <th>Previous Report ID</th>
                           </tr>
                         </thead>
                         <tbody>
+                          
                           <tr>
                             <td>1</td>
-                            <td><a href="worksheet_details.html" target="_blank">WN-1234-XA1</a></td>
-                            <td>TRF-1234-XA1</td>
-                            <td>Buyer X</td>
-                            <td>Service Type 1</td>
-                            <td>Jan 21st 2020</td>
-                            <td><span class="label label-success">Report Issued</span></td>
-                          </tr>
-                          <tr>
-                            <td>2</td>
-                            <td><a href="worksheet_details.html" target="_blank">WN-1234-XA1</a></td>
-                            <td>TRF-1234-XA1</td>
-                            <td>Buyer X</td>
-                            <td>Service Type 1</td>
-                            <td>Jan 21st 2020</td>
-                            <td><span class="label label-danger">Pending</span></td>
-                          </tr>
-                          <tr>
-                            <td>3</td>
-                            <td><a href="worksheet_details.html" target="_blank">WN-1234-XA1</a></td>
-                            <td>TRF-1234-XA1 Francisco</td>
-                            <td>Buyer X</td>
-                            <td>Service Type 1</td>
-                            <td>Jan 21st 2020</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
                             <td><span class="label label-info">On Process</span></td>
+                            <td>2019-10-14</td>
+                            <td>PI1234</td>
+                            <td>CLR1234</td>
+                            <td><a href='test_requests.html'> TRP-1234-XA1 </a></td>
+                            <td>2019-10-14</td>
+                            <td>2019-10-14</td>
+                            <td>Gap</td>
+                            <td>Fiona</td>
+                            <td>2019-10-14</td>
+                            <td>No</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
                           </tr>
+
                           <tr>
-                            <td>4</td>
-                            <td><a href="worksheet_details.html" target="_blank">WN-1234-XA1</a></td>
-                            <td>TRF-1234-XA1</td>
-                            <td>Buyer X</td>
-                            <td>Service Type 1</td>
-                            <td>Jan 21st 2020</td>
-                            <td><span class="label label-info">On Process</span></td>
-                          </tr>
-                          <tr>
-                            <td>5</td>
-                            <td><a href="worksheet_details.html" target="_blank">WN-1234-XA1</a></td>
-                            <td>TRF-1234-XA1</td>
-                            <td>Buyer X</td>
-                            <td>Service Type 1</td>
-                            <td>Jan 21st 2020</td>
-                            <td><span class="label label-danger">Pending</span></td>
-                          </tr>
-<!--                           <tr>
-                            <td>6</td>
-                            <td><a href="worksheet_details.html" target="_blank">WN-1234-XA1</a></td>
-                            <td>TRF-1234-XA1 York</td>
-                            <td>2012/Buyer X/td>
-                            <td>$Service Type 1
-                            <td>Jan 21st 2020</td>
-                            <td><span class="label label-danger">Pending</span></td>
-                          </tr>
-                          <tr>
-                            <td>7</td>
-                            <td><a href="worksheet_details.html" target="_blank">WN-1234-XA1</a></td>
-                            <td>TRF-1234-XA1 Francisco</td>
-                            <td>Buyer X</td>
-                            <td>Service Type 1</td>
-                            <td>Jan 21st 2020</td>
-                            <td><span class="label label-danger">Pending</span></td>
-                          </tr>
-                          <tr>
-                            <td>8</td>
-                            <td><a href="worksheet_details.html" target="_blank">WN-1234-XA1</a></td>
-                            <td>TRF-1234-XA1</td>
-                            <td>Buyer X</td>
-                            <td>Service Type 1</td>
-                            <td>Jan 21st 2020</td>
-                            <td><span class="label label-danger">Pending</span></td>
-                          </tr>
-                          <tr>
-                            <td>9</td>
-                            <td><a href="worksheet_details.html" target="_blank">WN-1234-XA1</a></td>
-                            <td>TRF-1234-XA1 Francisco</td>
-                            <td>Buyer X</td>
-                            <td>Service Type 1</td>
-                            <td>Jan 21st 2020</td>
-                            <td><span class="label label-danger">Pending</span></td>
-                          </tr>
-                          <tr>
-                            <td>10</td>
-                            <td><a href="worksheet_details.html" target="_blank">WN-1234-XA1</a></td>
-                            <td>TRF-1234-XA1</td>
-                            <td>Buyer X</td>
-                            <td>Service Type 1</td>
-                            <td>Jan 21st 2020</td>
-                            <td><span class="label label-danger">Pending</span></td>
-                          </tr>
-                          <tr>
-                            <td>11</td>
-                            <td><a href="worksheet_details.html" target="_blank">WN-1234-XA1</a></td>
-                            <td>TRF-1234-XA1</td>
-                            <td>Buyer X</td>
-                            <td>Service Type 1</td>
-                            <td>Jan 21st 2020</td>
-                            <td><span class="label label-danger">Pending</span></td>
-                          </tr>
-                          <tr>
-                            <td>12</td>
-                            <td><a href="worksheet_details.html" target="_blank">WN-1234-XA1</a></td>
-                            <td>TRF-1234-XA1</td>
-                            <td>Buyer X</td>
-                            <td>Service Type 1</td>
-                            <td>Jan 21st 2020</td>
-                            <td><span class="label label-danger">Pending</span></td>
-                          </tr>
-                          <tr>
-                            <td>13</td>
-                            <td><a href="worksheet_details.html" target="_blank">WN-1234-XA1</a></td>
-                            <td>TRF-1234-XA1 Francisco</td>
-                            <td>Buyer X</td>
-                            <td>Service Type 1</td>
-                            <td>Jan 21st 2020</td>
-                            <td><span class="label label-danger">Pending</span></td>
-                          </tr>
-                          <tr>
-                            <td>14</td>
-                            <td><a href="worksheet_details.html" target="_blank">WN-1234-XA1</a></td>
-                            <td>TRF-1234-XA1</td>
-                            <td>Buyer X</td>
-                            <td>Service Type 1</td>
-                            <td>Jan 21st 2020</td>
-                            <td><span class="label label-danger">Pending</span></td>
-                          </tr>
-                          <tr>
-                            <td>15</td>
-                            <td><a href="worksheet_details.html" target="_blank">WN-1234-XA1</a></td>
-                            <td>TRF-1234-XA1</td>
-                            <td>Buyer X</td>
-                            <td>Service Type 1</td>
-                            <td>Jan 21st 2020</td>
-                            <td><span class="label label-danger">Pending</span></td>
-                          </tr>
-                          <tr>
-                            <td>16</td>
-                            <td><a href="worksheet_details.html" target="_blank">WN-1234-XA1</a></td>
-                            <td>TRF-1234-XA1</td>
-                            <td>Buyer X</td>
-                            <td>Service Type 1</td>
-                            <td>Jan 21st 2020</td>
-                            <td><span class="label label-danger">Pending</span></td>
-                          </tr>
-                          <tr>
-                            <td>17</td>
-                            <td><a href="worksheet_details.html" target="_blank">WN-1234-XA1</a></td>
-                            <td>TRF-1234-XA1 York</td>
-                            <td>2010/Buyer X/td>
-                            <td>$Service Type 1
-                            <td>Jan 21st 2020</td>
-                            <td><span class="label label-danger">Pending</span></td>
-                          </tr>
-                          <tr>
-                            <td>18</td>
-                            <td><a href="worksheet_details.html" target="_blank">WN-1234-XA1</a></td>
-                            <td>TRF-1234-XA1 York</td>
-                            <td>2009/Buyer X/td>
-                            <td>$Service Type 1
-                            <td>Jan 21st 2020</td>
-                            <td><span class="label label-danger">Pending</span></td>
-                          </tr>
-                          <tr>
-                            <td>19</td>
-                            <td><a href="worksheet_details.html" target="_blank">WN-1234-XA1</a></td>
-                            <td>TRF-1234-XA1</td>
-                            <td>Buyer X</td>
-                            <td>Service Type 1</td>
-                            <td>Jan 21st 2020</td>
-                            <td><span class="label label-danger">Pending</span></td>
-                          </tr>
-                          <tr>
-                            <td>20</td>
-                            <td><a href="worksheet_details.html" target="_blank">WN-1234-XA1</a></td>
-                            <td>TRF-1234-XA1</td>
-                            <td>Buyer X</td>
-                            <td>Service Type 1</td>
-                            <td>Jan 21st 2020</td>
-                            <td><span class="label label-danger">Pending</span></td>
-                          </tr> -->
-<!--                           <tr>
-                            <td>21</td>
-                            <td><a href="worksheet_details.html" target="_blank">WN-1234-XA1</a></td>
-                            <td>TRF-1234-XA1 York</td>
-                            <td>2011/Buyer X/td>
-                            <td>$Service Type 1
-                            <td>Jan 21st 2020</td>
-                            <td><span class="label label-danger">Pending</span></td>
-                          </tr>
-                          <tr>
-                            <td>22</td>
-                            <td><a href="worksheet_details.html" target="_blank">WN-1234-XA1</a></td>
-                            <td>TRF-1234-XA1 York</td>
-                            <td>2009/Buyer X/td>
-                            <td>$Service Type 1
-                            <td>Jan 21st 2020</td>
-                            <td><span class="label label-danger">Pending</span></td>
-                          </tr>
-                          <tr>
-                            <td>23</td>
-                            <td><a href="worksheet_details.html" target="_blank">WN-1234-XA1</a></td>
-                            <td>TRF-1234-XA1 York</td>
-                            <td>2011/Buyer X/td>
-                            <td>$Service Type 1
-                            <td>Jan 21st 2020</td>
-                            <td><span class="label label-danger">Pending</span></td>
-                          </tr>
-                          <tr>
-                            <td>24</td>
-                            <td><a href="worksheet_details.html" target="_blank">WN-1234-XA1</a></td>
-                            <td>TRF-1234-XA1</td>
-                            <td>Buyer X</td>
-                            <td>Service Type 1</td>
-                            <td>Jan 21st 2020</td>
-                            <td><span class="label label-danger">Pending</span></td>
-                          </tr>
-                          <tr>
-                            <td>25</td>
-                            <td><a href="worksheet_details.html" target="_blank">WN-1234-XA1</a></td>
-                            <td>TRF-1234-XA1</td>
-                            <td>Buyer X</td>
-                            <td>Service Type 1</td>
-                            <td>Jan 21st 2020</td>
+                            <td>1</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
                             <td><span class="label label-success">Report Issued</span></td>
-                          </tr> -->
+                            <td>2019-10-14</td>
+                            <td>PI1234</td>
+                            <td>CLR1234</td>
+                            <td><a href='test_requests.html'> TRP-1234-XA1 </a></td>
+                            <td>2019-10-14</td>
+                            <td>2019-10-14</td>
+                            <td>Gap</td>
+                            <td>Fiona</td>
+                            <td>2019-10-14</td>
+                            <td>No</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
+                          </tr>
+
+                          <tr>
+                            <td>1</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
+                            <td><span class="label label-danger">Pending</span></td>
+                            <td>2019-10-14</td>
+                            <td>PI1234</td>
+                            <td>CLR1234</td>
+                            <td><a href='test_requests.html'> TRP-1234-XA1 </a></td>
+                            <td>2019-10-14</td>
+                            <td>2019-10-14</td>
+                            <td>Gap</td>
+                            <td>Fiona</td>
+                            <td>2019-10-14</td>
+                            <td>No</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
+                          </tr>
+
+                          <tr>
+                            <td>1</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
+                            <td><span class="label label-info">On Process</span></td>
+                            <td>2019-10-14</td>
+                            <td>PI1234</td>
+                            <td>CLR1234</td>
+                            <td><a href='test_requests.html'> TRP-1234-XA1 </a></td>
+                            <td>2019-10-14</td>
+                            <td>2019-10-14</td>
+                            <td>Gap</td>
+                            <td>Fiona</td>
+                            <td>2019-10-14</td>
+                            <td>No</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
+                          </tr>
+
+                          <tr>
+                            <td>1</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
+                            <td><span class="label label-info">On Process</span></td>
+                            <td>2019-10-14</td>
+                            <td>PI1234</td>
+                            <td>CLR1234</td>
+                            <td><a href='test_requests.html'> TRP-1234-XA1 </a></td>
+                            <td>2019-10-14</td>
+                            <td>2019-10-14</td>
+                            <td>Gap</td>
+                            <td>Fiona</td>
+                            <td>2019-10-14</td>
+                            <td>No</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
+                          </tr>
+
+                          <tr>
+                            <td>1</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
+                            <td><span class="label label-success">Report Issued</span></td>
+                            <td>2019-10-14</td>
+                            <td>PI1234</td>
+                            <td>CLR1234</td>
+                            <td><a href='test_requests.html'> TRP-1234-XA1 </a></td>
+                            <td>2019-10-14</td>
+                            <td>2019-10-14</td>
+                            <td>Gap</td>
+                            <td>Fiona</td>
+                            <td>2019-10-14</td>
+                            <td>No</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
+                          </tr>
+
+                          <tr>
+                            <td>1</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
+                            <td><span class="label label-success">Report Issued</span></td>
+                            <td>2019-10-14</td>
+                            <td>PI1234</td>
+                            <td>CLR1234</td>
+                            <td><a href='test_requests.html'> TRP-1234-XA1 </a></td>
+                            <td>2019-10-14</td>
+                            <td>2019-10-14</td>
+                            <td>Gap</td>
+                            <td>Fiona</td>
+                            <td>2019-10-14</td>
+                            <td>No</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
+                          </tr>
+
+                          <tr>
+                            <td>1</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
+                            <td><span class="label label-danger">Pending</span></td>
+                            <td>2019-10-14</td>
+                            <td>PI1234</td>
+                            <td>CLR1234</td>
+                            <td><a href='test_requests.html'> TRP-1234-XA1 </a></td>
+                            <td>2019-10-14</td>
+                            <td>2019-10-14</td>
+                            <td>Gap</td>
+                            <td>Fiona</td>
+                            <td>2019-10-14</td>
+                            <td>No</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
+                          </tr>
+
+                          <tr>
+                            <td>1</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
+                            <td><span class="label label-danger">Pending</span></td>
+                            <td>2019-10-14</td>
+                            <td>PI1234</td>
+                            <td>CLR1234</td>
+                            <td><a href='test_requests.html'> TRP-1234-XA1 </a></td>
+                            <td>2019-10-14</td>
+                            <td>2019-10-14</td>
+                            <td>Gap</td>
+                            <td>Fiona</td>
+                            <td>2019-10-14</td>
+                            <td>No</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
+                          </tr>
+
+                          <tr>
+                            <td>1</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
+                            <td><span class="label label-danger">Pending</span></td>
+                            <td>2019-10-14</td>
+                            <td>PI1234</td>
+                            <td>CLR1234</td>
+                            <td><a href='test_requests.html'> TRP-1234-XA1 </a></td>
+                            <td>2019-10-14</td>
+                            <td>2019-10-14</td>
+                            <td>Gap</td>
+                            <td>Fiona</td>
+                            <td>2019-10-14</td>
+                            <td>No</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
+                          </tr>
+
+                          <tr>
+                            <td>1</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
+                            <td><span class="label label-info">On Process</span></td>
+                            <td>2019-10-14</td>
+                            <td>PI1234</td>
+                            <td>CLR1234</td>
+                            <td><a href='test_requests.html'> TRP-1234-XA1 </a></td>
+                            <td>2019-10-14</td>
+                            <td>2019-10-14</td>
+                            <td>Gap</td>
+                            <td>Fiona</td>
+                            <td>2019-10-14</td>
+                            <td>No</td>
+                            <td><a href='test_requests.html'> TR-1234-XA1 </a></td>
+                          </tr>
                          
                         </tbody>
                       </table>
@@ -579,6 +553,7 @@
     <script src="dist/js/pages/jasny-bootstrap.js"></script>
     <script>
       $(function () {
+        $(function () {
         var table = $('#myTable').DataTable({
           "bInfo": false,
           "lengthChange": false,
@@ -590,6 +565,7 @@
             [1, 'asc']
           ]
         });
+      });
       });
     </script>
   </body>

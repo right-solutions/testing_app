@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
-    <title>Look Ups</title>
+    <title>Look Up - Add Claim Construction</title>
     <link href="dist/css/style.css" rel="stylesheet">
     <link href="dist/css/custom.css" rel="stylesheet">
     <link href="assets/node_modules/wizard/steps.css" rel="stylesheet">
@@ -43,7 +43,7 @@
                         <!-- Logo icon --><b>
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                            <!--<img src="assets/images/logo-icon.png" alt="homepage" class="dark-logo" />-->
+                            <img src="assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
                             <!-- Light Logo icon -->
                             <img src="assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
                         </b>
@@ -68,11 +68,11 @@
                         <!-- ============================================================== -->
                         <!-- Search -->
                         <!-- ============================================================== -->
-                        <li class="nav-item">
+<!--                         <li class="nav-item">
                             <form class="app-search d-none d-md-block d-lg-block">
                                 <input type="text" class="form-control" placeholder="Search & enter">
                             </form>
-                        </li>
+                        </li> -->
                     </ul>
                     
                     
@@ -114,18 +114,26 @@
             <div class="scroll-sidebar">
                 
                 <!-- Sidebar navigation-->
-                <nav class="sidebar-nav">
-                    <ul id="sidebarnav">
-                        <li class="nav-small-cap"></li>
-                          <li> <a class="waves-effect waves-dark" href="javascript:void(0)"><i class="icon-speedometer"></i><span class="hide-menu">Dashboard</span></a>
-                            <li> <a class="waves-effect waves-dark" href="javascript:void(0)"><i class="icon-speedometer"></i><span class="hide-menu">Menu One</span></a>
-                            <li> <a class="waves-effect waves-dark" href="javascript:void(0)"><i class="icon-speedometer"></i><span class="hide-menu">Menu Two</span></a>
-                            <li> <a class="waves-effect waves-dark" href="javascript:void(0)"><i class="icon-speedometer"></i><span class="hide-menu">Menu Three</span></a>
-                            <li> <a class="waves-effect waves-dark" href="javascript:void(0)"><i class="icon-speedometer"></i><span class="hide-menu">Menu Four</span></a>
-                            <li> <a class="waves-effect waves-dark" href="javascript:void(0)"><i class="icon-speedometer"></i><span class="hide-menu">Menu Five</span></a>
-                        </li>
+              <nav class="sidebar-nav">
+                <ul id="sidebarnav">
+                  <li class="nav-small-cap"></li>
+                  <li> <a class="waves-effect waves-dark" href="dashboard.html"><i class="icon-speedometer"></i><span class="hide-menu">Dashboard</span></a></li>
+                  <li> <a class="waves-effect waves-dark" href="test_requests.html"><i class="icon-layers"></i><span class="hide-menu">Test Requests</span></a></li>
+                  <li> <a class="waves-effect waves-dark" href="worksheets.html"><i class="ti-files"></i><span class="hide-menu">Worksheets</span></a></li>
+                  
+                  <li> <a class="waves-effect waves-dark" href="report_listing_page.html"><i class="ti-files"></i><span class="hide-menu">Reports</span></a></li>
+                  
+
+                  <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="ti-settings"></i><span class="hide-menu">Admin</span></a>
+                    <ul aria-expanded="false" class="collapse">
+                      <li><a href="manage_users.html"><i class="icon-people mr-2"></i>Manage Users</a></li>
+                      <li class="active"><a href="look_up_index.html"><i class="fa fa-th-list mr-2"></i>Look Ups</a></li>
+                      <li><a href="settings.html"><i class="ti-settings mr-2"></i>Settings</a></li>
                     </ul>
-                </nav>
+                  </li>
+
+                </ul>
+              </nav>
                 <!-- End Sidebar navigation -->
             </div>
             <!-- End Sidebar scroll-->
@@ -146,14 +154,13 @@
           <!-- ============================================================== -->
           <div class="row page-titles">
             <div class="col-md-5 align-self-center">
-              <h4 class="text-themecolor">Look Ups</h4>
+              <h4 class="text-themecolor">Look Up - Add Claim Construction</h4>
             </div>
             <div class="col-md-7 align-self-center text-right">
               <div class="d-flex justify-content-end align-items-center">
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                  <li class="breadcrumb-item"><a href="index.html">Admin</a></li>
-                  <li class="breadcrumb-item active">Look Ups</li>
+                  <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                  <li class="breadcrumb-item active">Look Up - Add Claim Construction</li>
                 </ol>
               </div>
             </div>
@@ -174,19 +181,151 @@
                   <div class="card-body">
                     <!-- <h4 class="card-title">Data Table</h4>
                       <h6 class="card-subtitle">Data table example</h6> -->
-                    <br>
-                    <div class="row">
-                        <div class="col-md-8 col-sm-8 mt-8">
-                            <h4 class="card-title">Look Up List <a class="get-code" data-toggle="collapse" href="#pgr1" aria-expanded="true"></a></h4>
-                            <ul class="list-group">
-                                <li class="list-group-item"><a href="look_ups.html" aria-expanded="true">Look Ups 1</a></li>
-                                <li class="list-group-item"><a href="look_ups.html" aria-expanded="true">Look Ups 2</a> </li>
-                                <li class="list-group-item"><a href="look_ups.html" aria-expanded="true">Look Ups 3</a> </li>
-                                <li class="list-group-item"><a href="look_ups.html" aria-expanded="true">Look Ups 4</a> </li>
-                                <li class="list-group-item"><a href="look_ups.html" aria-expanded="true">Look Ups 5</a> </li>
-                            </ul>
+                        <div class="row mb-2">
+                          <div class="col-md-8">
+
+                            <!-- Add Button -->
+                            <a class="btn btn-primary mr-2" data-remote="true" href="javascript:void(0)" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">
+                              <span class="fa fa-plus"></span> New Look Up
+                            </a>
+
+                            <!-- Refresh & Filter Button Group -->
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                              <button type="button" class="btn btn-secondary">
+                                <a href="#"><i class="fa fa-sync-alt"></i> </a>
+                              </button>
+                              <button type="button" class="btn btn-secondary">
+                                <a href="#"><i class="fa fa-filter"></i> </a>
+                              </button>
+                            </div>
+
+                            <!-- Columns & Export Button Group -->
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                              <button type="button" class="btn btn-secondary">
+                                <a href="#"><i class="fa fa-file-excel"></i> Excel</a>
+                              </button>
+                              <button type="button" class="btn btn-secondary">
+                                <a href="#"><i class="fa fa-file-csv"></i> CSV</a>
+                              </button>
+                            </div>
+                            
+                          </div>
+
+                          <div class="col-md-4 col-xs-12 mt-2 mt-sm-0">
+                            <form class="pull-right" id="new_leave_request" style="margin-bottom:0px;width:100%;" action="http://localhost:9001/7/leave_requests?called_from=index&amp;locale=en" accept-charset="UTF-8" data-remote="true" method="get"><input name="utf8" type="hidden" value="✓"><div class="input-group"><input type="hidden" name="site_id" id="site_id" value="7"><input type="text" name="q" id="q" value="" class="form-control" placeholder="Search ..."><span class="input-group-append"><button name="button" type="submit" class="btn btn-primary"><i class="fa fa-search"></i><span class="btn-text hidden-sm hidden-xs"> Search!</span></button></span></div></form>
+                          </div>
+                          
                         </div>
-                      </div>
+                        <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" id="exampleModalLabel1">New message</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="recipient-name" class="control-label">Country Name:</label>
+                                                <input type="text" class="form-control" id="recipient-name1">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="recipient-name" class="control-label">Country Cost:</label>
+                                                <input type="text" class="form-control" id="recipient-name1">
+                                            </div>
+                                            <div class="row">
+                                              <div class="custom-control custom-radio form-group col-md-6">
+                                                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                                    <label class="custom-control-label" for="customRadio1">Show in Country Request Form</label>
+                                                </div>
+                                              <div class="custom-control custom-radio form-group col-md-6">
+                                                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                                    <label class="custom-control-label" for="customRadio1">FPT</label>
+                                                </div>
+                                              </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="control-label">Description:</label>
+                                                <textarea class="form-control" id="message-text1"></textarea>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Send message</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                <!-- /.modal -->
+                    <!-- <br> -->
+                    <div class="table-responsive m-t-10">
+                      <table id="myTable" class="table table-bordered table-striped color-table muted-table">
+                        <thead>
+                          <tr>
+                            <th>Sl. No.</th>
+                            <th>Code</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Value</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          
+                          <tr>
+                            <td>1</td>
+                            <td><a href='#'> LK-1234-XA1 </a></td>
+                            <td>Chaina</td>
+                            <td>Description Text</td>
+                            <td>Chaina</td>
+                            <td><span class="label label-success">Active</span></td>
+                            <td>Edit | Delete</td>
+                          </tr>
+
+                          <tr>
+                            <td>2</td>
+                            <td><a href='#'> LK-1234-XA1 </a></td>
+                            <td>India</td>
+                            <td>Description Text</td>
+                            <td>India</td>
+                            <td><span class="label label-success">Active</span></td>
+                            <td>Edit | Delete</td>
+                          </tr>
+
+                          <tr>
+                            <td>3</td>
+                            <td><a href='#'> LK-1234-XA1 </a></td>
+                            <td>Pakisthan</td>
+                            <td>Description Text</td>
+                            <td>Pakisthan</td>
+                            <td><span class="label label-success">Active</span></td>
+                            <td>Edit | Delete</td>
+                          </tr>
+
+                          <tr>
+                            <td>4</td>
+                            <td><a href='#'> LK-1234-XA1 </a></td>
+                            <td>united states america</td>
+                            <td>Description Text</td>
+                            <td>united states america</td>
+                            <td><span class="label label-info">Pending</span></td>
+                            <td>Edit | Delete</td>
+                          </tr>
+
+                          <tr>
+                            <td>5</td>
+                            <td><a href='#'> LK-1234-XA1 </a></td>
+                            <td>united arab emirates</td>
+                            <td>Description Text</td>
+                            <td>united arab emirates</td>
+                            <td><span class="label label-danger">Removed</span></td>
+                            <td>Edit | Delete</td>
+                          </tr>
+                         
+                        </tbody>
+                      </table>
+                    </div>
                       
                     <!-- ============================================================== -->
                     <!-- End Container fluid  -->
@@ -245,8 +384,14 @@
         $('#myTable').DataTable();
         var table = $('#example').DataTable({
           "columnDefs": [{
-            "visible": false,
-            "targets": 2
+              "bInfo": false,
+              "lengthChange": false,
+              "responsive": true,
+              "searching": false,
+              "paging": true,
+              "ordering": true,
+              "order": [
+                [1, 'asc']
           }],
           "order": [
           [2, 'asc']

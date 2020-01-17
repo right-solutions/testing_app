@@ -117,7 +117,7 @@
             <ul id="sidebarnav">
               <li class="nav-small-cap"></li>
               <li> <a class="waves-effect waves-dark" href="dashboard.html"><i class="icon-speedometer"></i><span class="hide-menu">Dashboard</span></a></li>
-              <li class="active"> <a class="waves-effect waves-dark" href="test_requests.html"><i class="icon-layers"></i><span class="hide-menu">Test Requests</span></a></li>
+              <li> <a class="waves-effect waves-dark" href="test_requests.html"><i class="icon-layers"></i><span class="hide-menu">Test Requests</span></a></li>
               <li> <a class="waves-effect waves-dark" href="worksheets.html"><i class="ti-files"></i><span class="hide-menu">Worksheets</span></a></li>
               
               <li> <a class="waves-effect waves-dark" href="report_listing_page.html"><i class="ti-files"></i><span class="hide-menu">Reports</span></a></li>
@@ -125,9 +125,9 @@
 
               <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="ti-settings"></i><span class="hide-menu">Admin</span></a>
                 <ul aria-expanded="false" class="collapse">
-                  <li><a href="javascript:void(0)"><i class="icon-people mr-2"></i>Manage Users</a></li>
-                  <li><a href="look_ups.html"><i class="fa fa-th-list mr-2"></i>Look Ups</a></li>
-                  <li><a href="javascript:void(0)"><i class="ti-settings mr-2"></i>Settings</a></li>
+                  <li><a href="manage_users.html"><i class="icon-people mr-2"></i>Manage Users</a></li>
+                  <li class="active"><a href="look_up_index.html"><i class="fa fa-th-list mr-2"></i>Look Ups</a></li>
+                  <li><a href="settings.html"><i class="ti-settings mr-2"></i>Settings</a></li>
                 </ul>
               </li>
 
@@ -178,190 +178,28 @@
               <div class="card wizard-content">
                 <div class="card">
                   <div class="card-body">
-                    <!-- <h4 class="card-title">Data Table</h4>
-                      <h6 class="card-subtitle">Data table example</h6> -->
-                    <br>
-                    <div class="container-fluid">
-                      <div class="row mb-2">
-                        <div class="col-md-8">
 
-                          <!-- Add Button -->
-                          <a class="btn btn-primary mr-2" data-remote="true" href="new_test_reqeust.html">
-                            <span class="fa fa-plus"></span> New Test Request
-                          </a>
 
-                          <!-- Refresh & Filter Button Group -->
-                          <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-secondary">
-                              <a href="#"><i class="fa fa-sync-alt"></i></a>
-                            </button>
-                            <button type="button" class="btn btn-secondary">
-                              <a href="#"><i class="fa fa-filter"></i></a>
-                            </button>
-                          </div>
-
-                          <!-- Columns & Export Button Group -->
-                          <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-secondary">
-                              <a href="#"><i class="fa fa-file-excel"></i> Excel</a>
-                            </button>
-                            <button type="button" class="btn btn-secondary">
-                              <a href="#"><i class="fa fa-file-csv"></i> CSV</a>
-                            </button>
-                          </div>
-                          
-                        </div>
-
-                        <div class="col-md-4 col-xs-12 mt-2 mt-sm-0">
-                          <form class="pull-right" id="new_leave_request" style="margin-bottom:0px;width:100%;" action="http://localhost:9001/7/leave_requests?called_from=index&amp;locale=en" accept-charset="UTF-8" data-remote="true" method="get"><input name="utf8" type="hidden" value="✓"><div class="input-group"><input type="hidden" name="site_id" id="site_id" value="7"><input type="text" name="q" id="q" value="" class="form-control" placeholder="Search ..."><span class="input-group-append"><button name="button" type="submit" class="btn btn-primary"><i class="fa fa-search"></i><span class="btn-text hidden-sm hidden-xs"> Search!</span></button></span></div></form>
-                        </div>
-                        
+                    <div class="row">
+                      <div class="col-sm-12 align-self-center">
+                        <h4 class="text-themecolor text-center pb-3">Look List</h4>
                       </div>
-                      <div class="row mt-3" style="border: 1px solid #ebeff3; padding: 25px; background-color: #ebeff3; ">
-                        <!-- <div class="col-md-12">
-                          <h3>Filter: </h3>
-                        </div> -->
-                        <div class="col-md-2">
-                          <div class="form-group">
-                            <label for="wApplicant"> Test Request Id : <span class="danger">*</span> </label>
-                            <input type="text" class="form-control " id="wApplicant" name="applicant">
-                          </div>
-                        </div>
-                        <div class="col-lg-2">
-                          <div class="form-group">
-                            <label for="wATTIN"> Status : </label>
-                            <select name="" class="form-control">
-                              <option selected> --Select -- </option>
-                              <option>All</option>
-                              <option>Pending</option>
-                              <option>On Process</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="col-md-2">
-                          <div class="form-group">
-                            <label for="wAddress"> Submited Date : <span class="danger">*</span> </label>
-                            <input type="text" class="form-control " id="wAddress" name="address">
-                          </div>
-                        </div>
-                        <div class="col-lg-2">
-                          <div class="form-group">
-                            <label for="wATTIN"> Service Type : <span class="danger">*</span> </label>
-                            <select name="" class="form-control">
-                              <option selected> -- Select -- </option>
-                              <option>Regular</option>
-                              <option>Option 2</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="col-lg-2">
-                          <div class="form-group">
-                            <label for="wATTIN"> Buyer : <span class="danger">*</span> </label>
-                            <select name="" class="form-control">
-                              <option selected> -- Select -- </option>
-                              <option>Gap</option>
-                              <option>Raymond</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="col-lg-2">
-                          <div class="form-group">
-                            <label for="wATTIN"> Testing Methord : <span class="danger">*</span> </label>
-                            <select name="" class="form-control">
-                              <option selected> --Select -- </option>
-                              <option>Create</option>
-                              <option>Add Data</option>
-                              <option>Accept Revision</option>
-                            </select>
-                          </div>
-                        </div>
-
-                        <div class="actions clearfix  col-lg-12">
-                          <button type="submit" class="btn btn-primary" style="float: right; margin-left: 10px" >Apply</button>
-                          <button type="submit" class="btn btn-dark" style="float: right;" >Cancel</button>
-<!--                           <ul role="menu" aria-label="Pagination">
-                            <li class="disabled" aria-disabled="true"><a href="#previous" role="menuitem">Cancel</a></li>
-                            <li aria-hidden="true"><a href="#finish" role="menuitem">Apply</a></li>
-                          </ul> -->
-                        </div>
-
-                      </div>
-                    </div>
-                    <div class="table-responsive m-t-40">
-                      <table id="myTable" class="table table-bordered table-striped color-table muted-table">
-                        <thead>
-                          <tr>
-                            <th>Sl. No.</th>
-                            <th>Test Methord</th>
-                            <th>Test Status</th>
-                            <th>Test Request Id</th>
-                            <th>Test Report Id</th>
-                            <th>Date of Submision</th>
-                            <th>Buyer</th>
-                            <th>Report Generated Date</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          
-                          <tr>
-                            <td>1</td>
-                            <td>
-                              <a class="btn waves-effect waves-light btn-success" href='create_worksheet.html' target="_blank"> Create </a>
-                            </td>
-                            <td><span class="label label-info">Pending</span></td>
-                            <td><a href='#'> TR-1234-XA1 </a></td>
-                            <td align="center" > ... </td>
-                            <td>2019-10-14</td>
-                            <td>Gap</td>
-                            <td>2019-10-14</td>
-                          </tr>
-                          <tr>
-                            <td>2</td>
-                            <td> <a class="btn waves-effect waves-light btn-success" href='create_worksheet.html' target="_blank"> Create </a></td>
-                            <td><span class="label label-info">Pending</span></td>
-                            <td><a href='#'> TR-1234-XB4 </a></td>
-                            <td align="center" > ... </td>
-                            <td>2019-9-04</td>
-                            <td>Gap</td>
-                            <td>2019-9-14</td>
-                          </tr>
-                          <tr>
-                            <td>3</td>
-                            <td> <a class="btn waves-effect waves-light btn-success" href='create_worksheet.html' target="_blank"> Create </a></td>
-                            <td><span class="label label-info">Pending</span></td>
-                            <td><a href='#'> TR-1234-XA13 </a></td>
-                            <td align="center" > ... </td>
-                            <td>2019-10-9</td>
-                            <td>SNS Fashion</td>
-                            <td>2019-10-20</td>
-                          </tr>
-                          <tr>
-                            <td>4</td>
-                            <td> <a class="btn waves-effect waves-light btn-info" href='worksheet_details.html' target="_blank"> Add Data </a></td>
-                            <td><span class="label label-info">On Process</span></td>
-                            <td><a href='#'> TR-1234-XH22 </a></td>
-                            <td align="center" > ... </td>
-                            <td>2019-9-24</td>
-                            <td>Kohls</td>
-                            <td>2019-9-30</td>
-                          </tr>
-                          <tr>
-                            <td>5</td>
-                            <td> <a class="btn waves-effect waves-light btn-danger" href='worksheet_details.html' target="_blank"> Accept Revision </a></td>
-                            <td><span class="label label-info">TRF Revision</span></td>
-                            <td><a href='#'> TR-1234-XA34 </a></td>
-                            <td align="center" > ... </td>
-                            <td>2019-10-12</td>
-                            <td>Gap</td>
-                            <td>2019-10-21</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
                       
-                    <!-- ============================================================== -->
-                    <!-- End Container fluid  -->
-                    <!-- ============================================================== -->
+                      <ul class="list-group pb-3" style="width:80%;margin: 0px auto;">
+                        <li class="list-group-item"><a href="country_look_up.html" aria-expanded="true">Country Lookup</a></li>
+                        <li class="list-group-item"><a href="claim_construction_look_up.html" aria-expanded="true">Claim Construction Lookup</a></li>
+                        <li class="list-group-item"><a href="departments_look_up.html" aria-expanded="true">Department Lookup</a></li>
+                        <li class="list-group-item"><a href="dye_type_look_up.html" aria-expanded="true">Dye Type Lookup</a></li>
+                        <li class="list-group-item"><a href="end_use_look_up.html" aria-expanded="true">End Use Lookup</a></li>
+                        <li class="list-group-item"><a href="fabrik_mills_look_up.html" aria-expanded="true">Fabrik Mills Lookup</a></li>
+                        <li class="list-group-item"><a href="finish_look_up.html" aria-expanded="true">Finish Lookup</a></li>
+                        <li class="list-group-item"><a href="test_look_up.html" aria-expanded="true">Test Lookup</a></li>
+                        <li class="list-group-item"><a href="season_look_up.html" aria-expanded="true">Season Lookup</a></li>
+                        <li class="list-group-item"><a href="service_type_look_up.html" aria-expanded="true">Service Type Lookup</a></li>
+
+                      </ul>
+
+                    </div>
                   </div>
                 </div>
               </div>

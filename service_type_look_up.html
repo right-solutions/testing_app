@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -43,7 +44,7 @@
                         <!-- Logo icon --><b>
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                            <!--<img src="assets/images/logo-icon.png" alt="homepage" class="dark-logo" />-->
+                            <img src="assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
                             <!-- Light Logo icon -->
                             <img src="assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
                         </b>
@@ -68,11 +69,11 @@
                         <!-- ============================================================== -->
                         <!-- Search -->
                         <!-- ============================================================== -->
-                        <li class="nav-item">
+<!--                         <li class="nav-item">
                             <form class="app-search d-none d-md-block d-lg-block">
                                 <input type="text" class="form-control" placeholder="Search & enter">
                             </form>
-                        </li>
+                        </li> -->
                     </ul>
                     
                     
@@ -114,18 +115,26 @@
             <div class="scroll-sidebar">
                 
                 <!-- Sidebar navigation-->
-                <nav class="sidebar-nav">
-                    <ul id="sidebarnav">
-                        <li class="nav-small-cap"></li>
-                          <li> <a class="waves-effect waves-dark" href="javascript:void(0)"><i class="icon-speedometer"></i><span class="hide-menu">Dashboard</span></a>
-                            <li> <a class="waves-effect waves-dark" href="javascript:void(0)"><i class="icon-speedometer"></i><span class="hide-menu">Menu One</span></a>
-                            <li> <a class="waves-effect waves-dark" href="javascript:void(0)"><i class="icon-speedometer"></i><span class="hide-menu">Menu Two</span></a>
-                            <li> <a class="waves-effect waves-dark" href="javascript:void(0)"><i class="icon-speedometer"></i><span class="hide-menu">Menu Three</span></a>
-                            <li> <a class="waves-effect waves-dark" href="javascript:void(0)"><i class="icon-speedometer"></i><span class="hide-menu">Menu Four</span></a>
-                            <li> <a class="waves-effect waves-dark" href="javascript:void(0)"><i class="icon-speedometer"></i><span class="hide-menu">Menu Five</span></a>
-                        </li>
+              <nav class="sidebar-nav">
+                <ul id="sidebarnav">
+                  <li class="nav-small-cap"></li>
+                  <li> <a class="waves-effect waves-dark" href="dashboard.html"><i class="icon-speedometer"></i><span class="hide-menu">Dashboard</span></a></li>
+                  <li> <a class="waves-effect waves-dark" href="test_requests.html"><i class="icon-layers"></i><span class="hide-menu">Test Requests</span></a></li>
+                  <li> <a class="waves-effect waves-dark" href="worksheets.html"><i class="ti-files"></i><span class="hide-menu">Worksheets</span></a></li>
+                  
+                  <li> <a class="waves-effect waves-dark" href="report_listing_page.html"><i class="ti-files"></i><span class="hide-menu">Reports</span></a></li>
+                  
+
+                  <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="ti-settings"></i><span class="hide-menu">Admin</span></a>
+                    <ul aria-expanded="false" class="collapse">
+                      <li><a href="manage_users.html"><i class="icon-people mr-2"></i>Manage Users</a></li>
+                      <li class="active"><a href="look_up_index.html"><i class="fa fa-th-list mr-2"></i>Look Ups</a></li>
+                      <li><a href="settings.html"><i class="ti-settings mr-2"></i>Settings</a></li>
                     </ul>
-                </nav>
+                  </li>
+
+                </ul>
+              </nav>
                 <!-- End Sidebar navigation -->
             </div>
             <!-- End Sidebar scroll-->
@@ -173,270 +182,146 @@
                   <div class="card-body">
                     <!-- <h4 class="card-title">Data Table</h4>
                       <h6 class="card-subtitle">Data table example</h6> -->
-                      <button type="button" class="btn btn-primary d-none d-lg-block m-l-15 pull-right" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap"><i class="fa fa-plus-circle"></i> Create New Service Type</button>
+                        <div class="row mb-2">
+                          <div class="col-md-8">
 
-                                <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h4 class="modal-title" id="exampleModalLabel1">New message</h4>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <!-- Add Button -->
+                            <a class="btn btn-primary mr-2" data-remote="true" href="javascript:void(0)" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">
+                              <span class="fa fa-plus"></span> New Look Up
+                            </a>
+
+                            <!-- Refresh & Filter Button Group -->
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                              <button type="button" class="btn btn-secondary">
+                                <a href="#"><i class="fa fa-sync-alt"></i> </a>
+                              </button>
+                              <button type="button" class="btn btn-secondary">
+                                <a href="#"><i class="fa fa-filter"></i> </a>
+                              </button>
+                            </div>
+
+                            <!-- Columns & Export Button Group -->
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                              <button type="button" class="btn btn-secondary">
+                                <a href="#"><i class="fa fa-file-excel"></i> Excel</a>
+                              </button>
+                              <button type="button" class="btn btn-secondary">
+                                <a href="#"><i class="fa fa-file-csv"></i> CSV</a>
+                              </button>
+                            </div>
+                            
+                          </div>
+
+                          <div class="col-md-4 col-xs-12 mt-2 mt-sm-0">
+                            <form class="pull-right" id="new_leave_request" style="margin-bottom:0px;width:100%;" action="http://localhost:9001/7/leave_requests?called_from=index&amp;locale=en" accept-charset="UTF-8" data-remote="true" method="get"><input name="utf8" type="hidden" value="✓"><div class="input-group"><input type="hidden" name="site_id" id="site_id" value="7"><input type="text" name="q" id="q" value="" class="form-control" placeholder="Search ..."><span class="input-group-append"><button name="button" type="submit" class="btn btn-primary"><i class="fa fa-search"></i><span class="btn-text hidden-sm hidden-xs"> Search!</span></button></span></div></form>
+                          </div>
+                          
+                        </div>
+                        <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" id="exampleModalLabel1">New message</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="recipient-name" class="control-label">Country Name:</label>
+                                                <input type="text" class="form-control" id="recipient-name1">
                                             </div>
-                                            <div class="modal-body">
-                                                <form>
-                                                    <div class="form-group">
-                                                        <label for="recipient-name" class="control-label">Service Type Name:</label>
-                                                        <input type="text" class="form-control" id="recipient-name1">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="recipient-name" class="control-label">Service Type Cost:</label>
-                                                        <input type="text" class="form-control" id="recipient-name1">
-                                                    </div>
-                                                    <div class="row">
-                                                      <div class="custom-control custom-radio form-group col-md-6">
-                                                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                                                            <label class="custom-control-label" for="customRadio1">Show in Service Type Request Form</label>
-                                                        </div>
-                                                      <div class="custom-control custom-radio form-group col-md-6">
-                                                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                                                            <label class="custom-control-label" for="customRadio1">FPT</label>
-                                                        </div>
-                                                      </div>
-                                                    <div class="form-group">
-                                                        <label for="message-text" class="control-label">Description:</label>
-                                                        <textarea class="form-control" id="message-text1"></textarea>
-                                                    </div>
-                                                </form>
+                                            <div class="form-group">
+                                                <label for="recipient-name" class="control-label">Country Cost:</label>
+                                                <input type="text" class="form-control" id="recipient-name1">
                                             </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-primary">Send message</button>
+                                            <div class="row">
+                                              <div class="custom-control custom-radio form-group col-md-6">
+                                                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                                    <label class="custom-control-label" for="customRadio1">Show in Country Request Form</label>
+                                                </div>
+                                              <div class="custom-control custom-radio form-group col-md-6">
+                                                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                                    <label class="custom-control-label" for="customRadio1">FPT</label>
+                                                </div>
+                                              </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="control-label">Description:</label>
+                                                <textarea class="form-control" id="message-text1"></textarea>
                                             </div>
-                                        </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Send message</button>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
                                 <!-- /.modal -->
-
-
-
-
-
-
-
-
                     <!-- <br> -->
-                    <div class="table-responsive m-t-40">
+                    <div class="table-responsive m-t-10">
                       <table id="myTable" class="table table-bordered table-striped color-table muted-table">
                         <thead>
                           <tr>
-                            <th>Si No</th>
-                            <th>Service Type Name</th>
-                            <th>Service Type Cost</th>
-                            <th>Show in TRF</th>
-                            <th>FPT</th>
+                            <th>Sl. No.</th>
+                            <th>Code</th>
+                            <th>Name</th>
                             <th>Description</th>
+                            <th>Value</th>
+                            <th>Status</th>
+                            <th>Actions</th>
                           </tr>
                         </thead>
                         <tbody>
+                          
                           <tr>
                             <td>1</td>
-                            <td>Count</span></td>
-                            <td></td>
-                            <td>61</td>
-                            <td>2011/04/25</td>
-                            <td>$320,800</td>
+                            <td><a href='#'> LK-1234-XA1 </a></td>
+                            <td>Service Type 1</td>
+                            <td>Description Text</td>
+                            <td>Service Type 1</td>
+                            <td><span class="label label-success">Active</span></td>
+                            <td>Edit | Delete</td>
                           </tr>
+
                           <tr>
                             <td>2</td>
-                            <td>Abrasion</span></td>
-                            <td>Tokyo</td>
-                            <td>63</td>
-                            <td>2011/07/25</td>
-                            <td>$170,750</td>
+                            <td><a href='#'> LK-1234-XA1 </a></td>
+                            <td>Service Type 2</td>
+                            <td>Description Text</td>
+                            <td>Service Type 2</td>
+                            <td><span class="label label-success">Active</span></td>
+                            <td>Edit | Delete</td>
                           </tr>
+
                           <tr>
                             <td>3</td>
-                            <td>Construction</span></td>
-                            <td>San Francisco</td>
-                            <td>66</td>
-                            <td>2009/01/12</td>
-                            <td>$86,000</td>
+                            <td><a href='#'> LK-1234-XA1 </a></td>
+                            <td>Service Type 3</td>
+                            <td>Description Text</td>
+                            <td>Service Type 3</td>
+                            <td><span class="label label-success">Active</span></td>
+                            <td>Edit | Delete</td>
                           </tr>
+
                           <tr>
                             <td>4</td>
-                            <td>Pilling</td>
-                            <td>Edinburgh</td>
-                            <td>22</td>
-                            <td>2012/03/29</td>
-                            <td>$433,060</td>
+                            <td><a href='#'> LK-1234-XA1 </a></td>
+                            <td>Service Type 4</td>
+                            <td>Description Text</td>
+                            <td>Service Type 4</td>
+                            <td><span class="label label-info">Pending</span></td>
+                            <td>Edit | Delete</td>
                           </tr>
+
                           <tr>
                             <td>5</td>
-                            <td>GSM</td>
-                            <td>Tokyo</td>
-                            <td>33</td>
-                            <td>2008/11/28</td>
-                            <td>$162,700</td>
-                          </tr>
-                          <tr>
-                            <td>6</td>
-                            <td>Integration Specialist</td>
-                            <td>New York</td>
-                            <td>61</td>
-                            <td>2012/12/02</td>
-                            <td>$372,000</td>
-                          </tr>
-                          <tr>
-                            <td>7</td>
-                            <td>Sales Assistant</td>
-                            <td>San Francisco</td>
-                            <td>59</td>
-                            <td>2012/08/06</td>
-                            <td>$137,500</td>
-                          </tr>
-                          <tr>
-                            <td>8</td>
-                            <td>Integration Specialist</td>
-                            <td>Tokyo</td>
-                            <td>55</td>
-                            <td>2010/10/14</td>
-                            <td>$327,900</td>
-                          </tr>
-                          <tr>
-                            <td>9</td>
-                            <td>Report Issued</span></td>
-                            <td>San Francisco</td>
-                            <td>39</td>
-                            <td>2009/09/15</td>
-                            <td>$205,500</td>
-                          </tr>
-                          <tr>
-                            <td>10</td>
-                            <td>Report Issued</span></td>
-                            <td>Edinburgh</td>
-                            <td>23</td>
-                            <td>2008/12/13</td>
-                            <td>$103,600</td>
-                          </tr>
-                          <tr>
-                            <td>11</td>
-                            <td>Report Issued</span></td>
-                            <td>London</td>
-                            <td>30</td>
-                            <td>2008/12/19</td>
-                            <td>$90,560</td>
-                          </tr>
-                          <tr>
-                            <td>12</td>
-                            <td>Support Lead</td>
-                            <td>Edinburgh</td>
-                            <td>22</td>
-                            <td>2013/03/03</td>
-                            <td>$342,000</td>
-                          </tr>
-                          <tr>
-                            <td>13</td>
-                            <td>Regional Director</td>
-                            <td>San Francisco</td>
-                            <td>36</td>
-                            <td>2008/10/16</td>
-                            <td>$470,600</td>
-                          </tr>
-                          <tr>
-                            <td>14</td>
-                            <td>Senior Marketing Designer</td>
-                            <td>London</td>
-                            <td>43</td>
-                            <td>2012/12/18</td>
-                            <td>$313,500</td>
-                          </tr>
-                          <tr>
-                            <td>15</td>
-                            <td>Regional Director</td>
-                            <td>London</td>
-                            <td>19</td>
-                            <td>2010/03/17</td>
-                            <td>$385,750</td>
-                          </tr>
-                          <tr>
-                            <td>16</td>
-                            <td>Marketing Designer</td>
-                            <td>London</td>
-                            <td>66</td>
-                            <td>2012/11/27</td>
-                            <td>$198,500</td>
-                          </tr>
-                          <tr>
-                            <td>17</td>
-                            <td>Chief Financial Officer (CFO)</td>
-                            <td>New York</td>
-                            <td>64</td>
-                            <td>2010/06/09</td>
-                            <td>$725,000</td>
-                          </tr>
-                          <tr>
-                            <td>18</td>
-                            <td>Systems Administrator</td>
-                            <td>New York</td>
-                            <td>59</td>
-                            <td>2009/04/10</td>
-                            <td>$237,500</td>
-                          </tr>
-                          <tr>
-                            <td>19</td>
-                            <td>Software Engineer</td>
-                            <td>London</td>
-                            <td>41</td>
-                            <td>2012/10/13</td>
-                            <td>$132,000</td>
-                          </tr>
-                          <tr>
-                            <td>20</td>
-                            <td>Personnel Lead</td>
-                            <td>Edinburgh</td>
-                            <td>35</td>
-                            <td>2012/09/26</td>
-                            <td>$217,500</td>
-                          </tr>
-                          <tr>
-                            <td>21</td>
-                            <td>Development Lead</td>
-                            <td>New York</td>
-                            <td>30</td>
-                            <td>2011/09/03</td>
-                            <td>$345,000</td>
-                          </tr>
-                          <tr>
-                            <td>22</td>
-                            <td>Chief Marketing Officer (CMO)</td>
-                            <td>New York</td>
-                            <td>40</td>
-                            <td>2009/06/25</td>
-                            <td>$675,000</td>
-                          </tr>
-                          <tr>
-                            <td>23</td>
-                            <td>Pre-Sales Support</td>
-                            <td>New York</td>
-                            <td>21</td>
-                            <td>2011/12/12</td>
-                            <td>$106,450</td>
-                          </tr>
-                          <tr>
-                            <td>24</td>
-                            <td>Sales Assistant</td>
-                            <td>Sidney</td>
-                            <td>23</td>
-                            <td>2010/09/20</td>
-                            <td>$85,600</td>
-                          </tr>
-                          <tr>
-                            <td>25</td>
-                            <td>Chief Executive Officer (CEO)</td>
-                            <td>London</td>
-                            <td>47</td>
-                            <td>2009/10/09</td>
-                            <td>$1,200,000</td>
+                            <td><a href='#'> LK-1234-XA1 </a></td>
+                            <td>Service Type 5</td>
+                            <td>Description Text</td>
+                            <td>Service Type 5</td>
+                            <td><span class="label label-danger">Removed</span></td>
+                            <td>Edit | Delete</td>
                           </tr>
                          
                         </tbody>
@@ -500,8 +385,14 @@
         $('#myTable').DataTable();
         var table = $('#example').DataTable({
           "columnDefs": [{
-            "visible": false,
-            "targets": 2
+              "bInfo": false,
+              "lengthChange": false,
+              "responsive": true,
+              "searching": false,
+              "paging": true,
+              "ordering": true,
+              "order": [
+                [1, 'asc']
           }],
           "order": [
           [2, 'asc']
