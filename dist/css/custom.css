@@ -176,7 +176,9 @@ a:hover{
   .skin-red .page-titles .breadcrumb .breadcrumb-item.active {
     color: #91337d; }
 
-
+.popup_header{
+  background-color: #91337d
+}
 
 
 
